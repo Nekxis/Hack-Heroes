@@ -5,13 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0d3dd2ee-bc05-4759-9589-aa598ca04dbf" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/hack_heroes/src/components/MainSection/MainSection.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hack_heroes/src/components/SectionElement/SectionElement.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hack_heroes/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/hack_heroes/pages/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/hack_heroes/styles/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/hack_heroes/styles/globals.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -20,7 +30,9 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2G0BrnckWeTwxqsEt3rPbmkJss6" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -35,6 +47,7 @@
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
     "settings.editor.selected.configurable": "AtomConfig",
     "vue.rearranger.settings.migration": "true"
   }
@@ -48,6 +61,7 @@
       <option name="presentableId" value="Default" />
       <updated>1665515822918</updated>
       <workItem from="1665515825632" duration="974000" />
+      <workItem from="1665519353162" duration="3918000" />
     </task>
     <servers />
   </component>
