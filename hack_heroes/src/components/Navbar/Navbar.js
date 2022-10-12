@@ -8,12 +8,12 @@ export default function Navbar() {
     return (
         <nav className='sticky top-0 right-0 w-full bg-navbar-background backdrop-blur-navbar-blur md:h-14 h-20'>
             <div className='hidden h-full gap-14 w-full md:flex items-center justify-center'>
-                <div className=' bg-black w-40 h-10 rounded text-white font-bold flex justify-center items-center text-2xl'>LOGO</div>
+                <div className='hidden bg-black w-40 h-10 rounded text-white font-bold lg:flex justify-center items-center text-2xl'>LOGO</div>
 
                 <div className={`w-5/10 h-10 bg-white rounded-l flex items-center `}>
                     <input className='w-full p-1.5 h-full outline-none text-lg bg-transparent placeholder:text-black ' type='text' placeholder="Search..." />
                     <IconContext.Provider value={{size: '2rem'}}>
-                        <div className='cursor-pointer h-10 w-1/10 text-white bg-black flex justify-center items-center rounded-r'>
+                        <div className='cursor-pointer h-10 w-1/10 text-white bg-black flex duration-300 ease-in-out justify-center items-center rounded-r hover:text-black hover:bg-darkWhite'>
                             <AiOutlineSearch />
                         </div>
                     </IconContext.Provider>
@@ -30,7 +30,7 @@ export default function Navbar() {
             </div>
 
             {/* Mobile version */}
-            <div className='flex sm:hidden py-3 w-full justify-center items-center h-full'>
+            <div className='flex md:hidden py-3 w-full justify-center items-center h-full'>
                 <input className='w-8/10 rounded-l outline-none text-lg p-2' type='text' />
                 <IconContext.Provider value={{size: '1.5rem'}}>
                         <div className='cursor-pointer flex items-center justify-center bg-black px-3 py-2 rounded-r text-white' style={{height: '44px'}}>
