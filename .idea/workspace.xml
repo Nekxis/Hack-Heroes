@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0d3dd2ee-bc05-4759-9589-aa598ca04dbf" name="Changes" comment="" />
+    <list default="true" id="0d3dd2ee-bc05-4759-9589-aa598ca04dbf" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hack_heroes/src/components/SectionElement/SectionElement.js" beforeDir="false" afterPath="$PROJECT_DIR$/hack_heroes/src/components/SectionElement/SectionElement.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hack_heroes/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/hack_heroes/tailwind.config.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -57,7 +61,8 @@
       <workItem from="1665515825632" duration="974000" />
       <workItem from="1665519353162" duration="4219000" />
       <workItem from="1665569179904" duration="9000" />
-      <workItem from="1665569209844" duration="2495000" />
+      <workItem from="1665569209844" duration="4484000" />
+      <workItem from="1665573910543" duration="158000" />
     </task>
     <servers />
   </component>
