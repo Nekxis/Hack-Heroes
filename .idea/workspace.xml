@@ -5,11 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0d3dd2ee-bc05-4759-9589-aa598ca04dbf" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/hack_heroes/src/components/MainSection/MainSection.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hack_heroes/src/components/SectionElement/SectionElement.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hack_heroes/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/hack_heroes/pages/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hack_heroes/styles/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/hack_heroes/styles/globals.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hack_heroes/src/components/MainSection/MainSection.js" beforeDir="false" afterPath="$PROJECT_DIR$/hack_heroes/src/components/MainSection/MainSection.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hack_heroes/src/components/SectionElement/SectionElement.js" beforeDir="false" afterPath="$PROJECT_DIR$/hack_heroes/src/components/SectionElement/SectionElement.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,21 +35,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "dart.analysis.tool.window.visible": "false",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "AtomConfig",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;AtomConfig&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -61,7 +59,9 @@
       <option name="presentableId" value="Default" />
       <updated>1665515822918</updated>
       <workItem from="1665515825632" duration="974000" />
-      <workItem from="1665519353162" duration="3918000" />
+      <workItem from="1665519353162" duration="4219000" />
+      <workItem from="1665569179904" duration="9000" />
+      <workItem from="1665569209844" duration="1949000" />
     </task>
     <servers />
   </component>
