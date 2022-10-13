@@ -2,6 +2,7 @@ import logo from '../../../assets/images/logo.png';
 import { AiOutlineSearch } from 'react-icons/ai';
 import { HiUserCircle } from 'react-icons/hi';
 import { IconContext } from 'react-icons/lib';
+import Link from 'next/link';
 
 export default function Navbar() {
 
@@ -25,7 +26,9 @@ export default function Navbar() {
                           <HiUserCircle />
                         </div>
                     </IconContext.Provider>
+                    <Link href="/auth/login">
                     <p className='text-inherit font-bold text-lg '>My account</p>
+                    </Link>
                 </div>
             </div>
 
