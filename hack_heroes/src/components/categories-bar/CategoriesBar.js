@@ -36,7 +36,7 @@ export default function CategoriesBar() {
     ]
 
     return (
-        <section className='my-10 rounded h-auto p-2 w-8/10 mx-auto bg-navbar-background'>
+        <section className='mt-10 mb-6 rounded h-auto p-2 w-8/10 mx-auto bg-navbar-background'>
             <div className="hidden w-full md:flex flex-wrap gap-12 justify-center items-center">
                 {categories.map((category) => {
                     return (
