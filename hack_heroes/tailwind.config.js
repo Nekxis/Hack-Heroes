@@ -35,6 +35,8 @@ module.exports = {
         '8/10': '80%',
         '9/10': '90%',
         '10/10': '100%',
+        '128': '32rem',
+        '160': '40rem',
       },
       backgroundColor: {
         'navbar-background': 'rgba(234, 237, 240, 0.8)',
@@ -49,6 +51,7 @@ module.exports = {
         'graphite':'#37393B',
         'lite-graphite':'#404145',
         'super-lite-graphite':'#4e5055',
+        'white-smoke':'#f7f7f7',
         'white':'#FFFFFF',
         'whiteBlue':'#CDDEFF'
       },
