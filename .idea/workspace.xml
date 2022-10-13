@@ -5,10 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0d3dd2ee-bc05-4759-9589-aa598ca04dbf" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/hack_heroes/src/components/Footer/Fotter.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hack_heroes/src/components/Auth/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/hack_heroes/src/components/Auth/Login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hack_heroes/src/components/Auth/Register.js" beforeDir="false" afterPath="$PROJECT_DIR$/hack_heroes/src/components/Auth/Register.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hack_heroes/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/hack_heroes/tailwind.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hack_heroes/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/hack_heroes/pages/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hack_heroes/src/components/MainSection/SectionElement/SectionElement.js" beforeDir="false" afterPath="$PROJECT_DIR$/hack_heroes/src/components/MainSection/SectionElement/SectionElement.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,6 +51,11 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/hack_heroes/src/components/MainSection" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -65,6 +70,8 @@
       <workItem from="1665569209844" duration="4484000" />
       <workItem from="1665573910543" duration="4288000" />
       <workItem from="1665578215635" duration="405000" />
+      <workItem from="1665606097364" duration="1711000" />
+      <workItem from="1665691635666" duration="5013000" />
     </task>
     <servers />
   </component>
