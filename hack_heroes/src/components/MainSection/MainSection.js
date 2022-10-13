@@ -1,4 +1,4 @@
-import SectionElement from "../SectionElement/SectionElement";
+import SectionElement from "./SectionElement/SectionElement";
 
 export default function MainSection () {
   return(
