@@ -49,8 +49,9 @@ module.exports = {
         'graphite':'#37393B',
         'lite-graphite':'#404145',
         'super-lite-graphite':'#4e5055',
+        'white-smoke':'#f7f7f7',
         'white':'#FFFFFF',
-        'whiteBlue':'#CDDEFF'
+        'whiteBlue':'#CDDEFF',
       },
       backdropBlur: {
         'navbar-blur': '16px'
