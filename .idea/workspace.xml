@@ -6,7 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="0d3dd2ee-bc05-4759-9589-aa598ca04dbf" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hack_heroes/src/components/categories-bar/CategoriesBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/hack_heroes/src/components/categories-bar/CategoriesBar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hack_heroes/src/components/MainSection/MainSection.js" beforeDir="false" afterPath="$PROJECT_DIR$/hack_heroes/src/components/MainSection/MainSection.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hack_heroes/src/components/MainSection/SectionElement/SectionElement.js" beforeDir="false" afterPath="$PROJECT_DIR$/hack_heroes/src/components/MainSection/SectionElement/SectionElement.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hack_heroes/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/hack_heroes/tailwind.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
