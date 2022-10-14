@@ -1,4 +1,4 @@
-export default function SectionElement () {
+export default function SectionElement ({title, description, price}) {
   return(
     <div className="flex justify-around bg-white box-border">
       <div className="border-solid border-4 border-zinc-600 rounded-md drop-shadow-md hover:shadow-xl hover:bg-white-smoke grid max-w-sm grid-cols-1 justify-end items-center gap-y-24 gap-x-4 py-14 px-4 sm:px-6 sm:py-10 sm:my-7 sm:mx-10 lg:max-w-7xl lg:grid-cols-3 lg:my-4 lg:mx-6 lg:px-8">
@@ -10,14 +10,13 @@ export default function SectionElement () {
               />
         </div>
         <div className={'lg:col-span-2 lg:pl-4 pl-4'}>
-          <h2 className="text-3xl font-bold text-end tracking-tight text-gray-900 sm:text-4xl hover:underline hover:cursor-pointer">Technical Specifications</h2>
+          <h2 className="text-3xl font-bold text-end tracking-tight text-gray-900 sm:text-4xl hover:underline hover:cursor-pointer">{title}</h2>
           <p className="mt-4 text-end text-lg text-gray-500">
-            The walnut wood card tray is precision milled to perfectly fit a stack of Focus cards.
+           {description}
           </p>
-          <ul className={'flex sm:justify-self-end lg:flex-col sm:pl-24 sm:justify-around items-end py-2 text-sm'}>
-            <li>50zł</li>
-            <li>4.3</li>
-            <li>Jakub</li>
+          <ul className={'flex sm:justify-self-end lg:flex-row sm:pl-24  sm:justify-around items-end py-2'}>
+            <li className="text-3xl font-bold">{`${price} zł`}</li>
+            <li className="text-xl text-our-grey">Jakub</li>
           </ul>
 
         </div>

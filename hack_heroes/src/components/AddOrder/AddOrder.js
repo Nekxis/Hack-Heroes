@@ -1,8 +1,10 @@
-import { useRef, useState } from 'react';
+import { useRef } from 'react';
 import { useRouter } from 'next/router';
+import { db } from '../../../firebase';
+import { collection, addDoc } from 'firebase/firestore';
 const AddOrder = () => {
 
-    const [length, setLength] = useState('');
+
 
     const router = useRouter();
 
@@ -13,14 +15,11 @@ const AddOrder = () => {
     const phoneNumberRef = useRef();
     const descriptionRef = useRef();
 
-    const invalidNumbers = ['0' ,'1', '2', '3', '4', '5', '6', '7', '8', '9'];
-    
+    const ordersRef = collection(db, 'Orders');
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
 
-        
-        
         const enteredValues = {
             title: titleRef.current.value,
             city: cityRef.current.value,
@@ -30,11 +29,20 @@ const AddOrder = () => {
             description: descriptionRef.current.value,
         }
 
-        
-        // router.replace('/');
-        
+        await addDoc(ordersRef, 
+            {   
+                title: enteredValues.title, 
+                price: enteredValues.price, 
+                description: enteredValues.description,
+                city: enteredValues.city,
+                category: enteredValues.category,
+                phoneNumber: enteredValues.phoneNumber
+            });
+
+        router.replace('/');
+
     }
-    console.log(typeof length);
+    
     return (
         <div className="h-screen w-9/10 flex flex-col mx-auto justify-center items-center">
             <div className="flex justify-center items-center">
@@ -46,7 +54,7 @@ const AddOrder = () => {
                     </div>
                     <div className="flex flex-col">
                         <label className={'font-bold text-2xl'}>Dodaj Miejscowosc</label>
-                        <input ref={cityRef} onChange={(e) => setLength(e.target.value.length.toString())} pattern={`'[A-Za-z]${length}'`} required className=" text-xl text-black rounded-lg bg-gray-300 mt-2 outline-none p-2 border-solid border-2 border-gray-400 focus:border-gray-300" type="text" />
+                        <input ref={cityRef} required className=" text-xl text-black rounded-lg bg-gray-300 mt-2 outline-none p-2 border-solid border-2 border-gray-400 focus:border-gray-300" type="text" />
                     </div>
                     <div className="flex flex-col">
                         <label className={'font-bold text-2xl'}>Kategoria</label>

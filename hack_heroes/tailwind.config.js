@@ -57,7 +57,7 @@ module.exports = {
       },
       backdropBlur: {
         'navbar-blur': '16px'
-      }
+      },
     },
   },
   plugins: [],
