@@ -14,12 +14,12 @@ const profilePhoto = [{
       <img className="w-1/10 h-1/6 rounded-full mt-10"  src={profilePhoto[0].photo}></img>
       <h2 className="text-xl font-bold">Olaf Wiśnia</h2>
       <div className="grid lg:grid-cols-2 m-8 grid-col-1 ">
-        <button onClick={() => setTabs(true)} className="w-full px-36 py-4  border-solid border-2  border-gray-400 hover:border-gray-300 active:border-b-black">Moje dane</button>
-        <button onClick={() => setTabs(false)} className="w-full px-36 py-4  border-solid border-2  border-gray-400 hover:border-gray-300 active:border-b-black">Histioria moich zleceń</button>
+        <button onClick={() => setTabs(true)} className="w-full px-36 py-4  border-solid border-2  border-gray-400 hover:border-gray-300 focus:border-b-black">Moje dane</button>
+        <button onClick={() => setTabs(false)} className="w-full px-36 py-4  border-solid border-2  border-gray-400 hover:border-gray-300 focus:border-b-black">Histioria moich zleceń</button>
       </div>
       <div className="flex items-center w-full justify-center">
         {tabs && <DataTab />}
-        {/*{!tabs && <HistoryTab />}*/}
+        {!tabs && <HistoryTab />}
       </div>
     </div>
   )
