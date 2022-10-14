@@ -38,9 +38,9 @@ export default function CategoriesBar() {
     return (
         <section className='mt-10 mb-6 rounded h-auto p-2 w-8/10 mx-auto bg-navbar-background'>
             <div className="hidden w-full md:flex flex-wrap gap-12 justify-center items-center">
-                {categories.map((category) => {
+                {categories.map((category, index) => {
                     return (
-                        <div className="flex p-2 w-36 rounded justify-center items-center flex-col cursor-pointer ease-in-out duration-150 hover:bg-graphite hover:text-white">
+                        <div key={index} className="flex p-2 w-36 rounded justify-center items-center flex-col cursor-pointer ease-in-out duration-150 hover:bg-graphite hover:text-white">
                             <img className="p-1 bg-white" src={category.icon} style={{width: '50px', height: '50px', borderRadius: '50%'}}/>
                             <p className="mt-1 font-bold ">{category.name}</p>
                         </div>
@@ -49,9 +49,9 @@ export default function CategoriesBar() {
             </div>
             {/* Mobile devices */}
             <div className="grid grid-cols-2 justify-center items-center w-full md:hidden ">
-                {categories.map((category) => {
+                {categories.map((category, index) => {
                     return (
-                        <div className="flex p-2 w-full rounded justify-center items-center flex-col cursor-pointer ease-in-out duration-150 hover:bg-graphite hover:text-white">
+                        <div key={index} className="flex p-2 w-full rounded justify-center items-center flex-col cursor-pointer ease-in-out duration-150 hover:bg-graphite hover:text-white">
                             <img className="p-1 bg-white" src={category.icon} style={{width: '50px', height: '50px', borderRadius: '50%'}}/>
                             <p className="mt-1 font-bold ">{category.name}</p>
                         </div>
