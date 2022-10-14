@@ -84,8 +84,9 @@ const AddOrder = () => {
                     </div>
                     <button className=" lg:col-span-2 w-1/3 drop-shadow-xl m-auto content-center text-2xl text-white py-3 bg-graphite rounded-lg hover:bg-lite-graphite focus:bg-super-lite-graphite">Dodaj</button>
                 </form>
+
             </div>
         </div>
     )
-}
-export default AddOrder
+ }
+ export default AddOrder
