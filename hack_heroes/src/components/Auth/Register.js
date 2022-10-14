@@ -4,7 +4,7 @@ const Register = () => {
   return(
     < div className="grid grid-cols-1 sm:grid-cols-1 h-screen w-full">
       <div className="bg-white flex flex-col justify-center">
-        <form className="md:w-96 sm:w-80 sm:h-160 drop-shadow-2xl mx-auto bg-whiteGray border-black border-2 p-20 sm:p-10 px-20 rounded-lg">
+        <form className="md:w-96 sm:w-80 sm:h-160 drop-shadow-2xl mx-auto bg-whiteGray border-gray-400 solid border-2 p-20 sm:p-10 px-20 rounded-lg">
           <h2 className="text-black font-normal text-center text-4xl">Zarejestruj</h2>
           <div className="flex flex-col text-gray-400 py-4">
             <label className={'font-bold'}>Nazwa użytkownika</label>
