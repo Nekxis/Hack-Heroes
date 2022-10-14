@@ -1,4 +1,5 @@
 import DataTab from "./Tabs/DataTab"
+import HistoryTab from "./Tabs/HistoryTab"
 import { useState } from "react";
 
 export default function MyAccount () {
