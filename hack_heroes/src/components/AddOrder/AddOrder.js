@@ -29,10 +29,10 @@ const AddOrder = () => {
             description: descriptionRef.current.value,
         }
 
-        await addDoc(ordersRef, 
-            {   
-                title: enteredValues.title, 
-                price: enteredValues.price, 
+        await addDoc(ordersRef,
+            {
+                title: enteredValues.title,
+                price: enteredValues.price,
                 description: enteredValues.description,
                 city: enteredValues.city,
                 category: enteredValues.category,
@@ -42,11 +42,11 @@ const AddOrder = () => {
         router.replace('/');
 
     }
-    
+
     return (
         <div className="h-screen w-9/10 flex flex-col mx-auto justify-center items-center">
             <div className="flex justify-center items-center">
-                <form onSubmit={handleSubmit} className=" border-black border-2 grid lg:grid-cols-2 sm:grid-col-1 drop-shadow-md gap-12 w-full rounded-lg shadow-md bg-white-smoke p-10 ">
+                <form onSubmit={handleSubmit} className=" border-solid border-2 border-gray-400 grid lg:grid-cols-2 sm:grid-col-1 drop-shadow-md gap-12 w-full rounded-lg shadow-md bg-white-smoke p-10 ">
                     <h2 className=" text-left lg:col-span-2 text-4xl font-bold">Dodaj nowe zlecenie</h2>
                     <div className="flex flex-col lg:col-span-2">
                         <label className={'font-bold text-2xl'}>Dodaj tytuł</label>
