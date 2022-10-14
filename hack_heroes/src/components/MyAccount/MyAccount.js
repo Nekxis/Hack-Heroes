@@ -1,4 +1,5 @@
 import DataTab from "./Tabs/DataTab"
+import HistoryTab from "./Tabs/HistoryTab"
 export default function MyAccount () {
 
 const profilePhoto = [{
@@ -14,7 +15,8 @@ const profilePhoto = [{
         <button className="w-full px-36 py-4  border-solid border-2  border-gray-400 hover:border-gray-300 active:border-b-black">Histioria moich zleceń</button>
       </div>
       <div className="flex items-center w-full justify-center">
-      <DataTab></DataTab>
+      {/* <DataTab></DataTab> */}
+      <HistoryTab ></HistoryTab>
       </div>
     </div>
   )
