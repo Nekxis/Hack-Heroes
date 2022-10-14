@@ -10,7 +10,7 @@ export default function MainSection({ orders }) {
     <div className={'w-full justify-around grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3'}>
       {orders.map((order) => {
         return (
-          <SectionElement title={order.title} description={order.description}  price={order.price}/>
+          <SectionElement key={order.id} id={order.id} title={order.title} description={order.description}  price={order.price}/>
         )
       })}
     </div>
