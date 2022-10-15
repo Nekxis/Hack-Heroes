@@ -1,19 +1,22 @@
-import logo from '../../../assets/images/logo.png';
 import { AiOutlineSearch } from 'react-icons/ai';
-import { HiUserCircle } from 'react-icons/hi';
 import { IconContext } from 'react-icons/lib';
+import MyAccountButton from "./Buttons/MyAccountButton";
+import LoginButton from "./Buttons/LoginButton";
+import {useContext} from "react";
+import {Context} from "../../Context/Context";
 import Link from 'next/link';
 import { useState } from 'react'
 import { useRouter } from 'next/router';
 
 export default function Navbar() {
-
+  
+    const context = useContext(Context)
     const [query, setQuery] = useState('');
     const router = useRouter();
-
     const searchHandler = () => {
         router.push('/search/' + query)
     };
+
 
     return (
         <nav className='sticky top-0 right-0 w-full z-10 bg-navbar-background backdrop-blur-navbar-blur md:h-14 h-20'>
@@ -29,16 +32,8 @@ export default function Navbar() {
                     </IconContext.Provider>
                 </div>
 
-                <div className='w-44 rounded cursor-pointer border-2 border-black text-black ease-in-out duration-500 h-10 gap-1 flex items-center justify-center hover:bg-white hover:text-black'>
-                    <IconContext.Provider value={{ size: '2rem' }}>
-                        <div className='text-inherit'>
-                            <HiUserCircle />
-                        </div>
-                    </IconContext.Provider>
-                    <Link href="/auth/login">
-                        <p className='text-inherit font-bold text-lg '>My account</p>
-                    </Link>
-                </div>
+              {context.button && <LoginButton />}
+              {!context.button && <MyAccountButton />}
             </div>
 
             {/* Mobile version */}
