@@ -1,9 +1,14 @@
+
 import  Link  from "next/link";
 import { useState } from "react";
 import { createUserWithEmailAndPassword } from "firebase/auth"
 import { auth } from "../../../firebase";
 import {doc, setDoc} from "firebase/firestore"
 import { db } from "../../../firebase";
+import {useContext, useState} from "react"
+import {Context} from "../../Context/Context";
+import {useRouter} from "next/router";
+
 
 const Register = () => {
 
@@ -13,14 +18,15 @@ const Register = () => {
   const [registerEmail, setRegisterEmail] = useState('')
   const [userName, setUserName] = useState('')
 
-  const setPasswordHandler = (e) => { 
+  const setPasswordHandler = (e) => {
     setPassword(e.target.value)
   }
-  const setPasswordAgainHandler = (e) => { 
+  const setPasswordAgainHandler = (e) => {
     setPasswordAgain(e.target.value)
    }
-
-  const submitHandler = (e) => { 
+  const context = useContext(Context)
+  const router = useRouter()
+  const submitHandler = (e) => {
     e.preventDefault()
    if(password!==passwordAgain){
      setErrorPassword(true)
@@ -65,7 +71,10 @@ const Register = () => {
             <p className="cursor-pointer text-center hover:drop-shadow-md">Mam juz konto</p>
           </Link>
           <div className="w-full flex flex-col items-center">
-            <button onClick={register} className="w-1/2 justify-center drop-shadow-xl m-auto content-center text-white mt-5  py-3 bg-graphite rounded-lg hover:bg-lite-graphite focus:bg-super-lite-graphite">Zarejestruj</button>
+            <button onClick={()=> {
+              context.setButton(false);
+              router.push('/');
+            }} className="w-1/2 justify-center drop-shadow-xl m-auto content-center text-white mt-5  py-3 bg-graphite rounded-lg hover:bg-lite-graphite focus:bg-super-lite-graphite">Zarejestruj</button>
           </div>
         </form>
       </div>

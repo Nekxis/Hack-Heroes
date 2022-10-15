@@ -1,3 +1,6 @@
+import { useRouter } from 'next/router';
+
+
 export default function CategoriesBar() {
 
     const categories = [
@@ -33,15 +36,21 @@ export default function CategoriesBar() {
             name: 'Inne',
             icon: 'https://static.thenounproject.com/png/658625-200.png'
         }
-    ]
+    ];
+
+    const router = useRouter();
+
+    const pushSearchPage = (category) => {
+        router.push('/search/' + category)
+    };
 
     return (
         <section className='mt-10 mb-6 rounded h-auto p-2 w-8/10 mx-auto bg-navbar-background'>
             <div className="hidden w-full md:flex flex-wrap gap-12 justify-center items-center">
                 {categories.map((category, index) => {
                     return (
-                        <div key={index} className="flex p-2 w-36 rounded justify-center items-center flex-col cursor-pointer ease-in-out duration-150 hover:bg-graphite hover:text-white">
-                            <img className="p-1 bg-white" src={category.icon} style={{width: '50px', height: '50px', borderRadius: '50%'}}/>
+                        <div onClick={() => { pushSearchPage(category.name) }} key={index} className="flex p-2 w-36 rounded justify-center items-center flex-col cursor-pointer ease-in-out duration-150 hover:bg-graphite hover:text-white">
+                            <img className="p-1 bg-white" src={category.icon} style={{ width: '50px', height: '50px', borderRadius: '50%' }} />
                             <p className="mt-1 font-bold ">{category.name}</p>
                         </div>
                     )
@@ -51,8 +60,8 @@ export default function CategoriesBar() {
             <div className="grid grid-cols-2 justify-center items-center w-full md:hidden ">
                 {categories.map((category, index) => {
                     return (
-                        <div key={index} className="flex p-2 w-full rounded justify-center items-center flex-col cursor-pointer ease-in-out duration-150 hover:bg-graphite hover:text-white">
-                            <img className="p-1 bg-white" src={category.icon} style={{width: '50px', height: '50px', borderRadius: '50%'}}/>
+                        <div onClick={() => { pushSearchPage(category.name) }} key={index} className="flex p-2 w-full rounded justify-center items-center flex-col cursor-pointer ease-in-out duration-150 hover:bg-graphite hover:text-white">
+                            <img className="p-1 bg-white" src={category.icon} style={{ width: '50px', height: '50px', borderRadius: '50%' }} />
                             <p className="mt-1 font-bold ">{category.name}</p>
                         </div>
                     )
