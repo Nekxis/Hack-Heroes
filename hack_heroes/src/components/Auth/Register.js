@@ -1,13 +1,22 @@
-import  Link  from "next/link"
+
+import  Link  from "next/link";
+import { useState } from "react";
+import { createUserWithEmailAndPassword } from "firebase/auth"
+import { auth } from "../../../firebase";
+import {doc, setDoc} from "firebase/firestore"
+import { db } from "../../../firebase";
 import {useContext, useState} from "react"
 import {Context} from "../../Context/Context";
 import {useRouter} from "next/router";
+
 
 const Register = () => {
 
   const [password ,setPassword] = useState('')
   const [passwordAgain, setPasswordAgain] = useState('')
-  const [error, setError] = useState(false)
+  const [errorPassword, setErrorPassword] = useState(false)
+  const [registerEmail, setRegisterEmail] = useState('')
+  const [userName, setUserName] = useState('')
 
   const setPasswordHandler = (e) => {
     setPassword(e.target.value)
@@ -20,10 +29,22 @@ const Register = () => {
   const submitHandler = (e) => {
     e.preventDefault()
    if(password!==passwordAgain){
-     setError(true)
+     setErrorPassword(true)
      return
    }
    }
+
+   const register = async () => { 
+     try{
+     const user = await createUserWithEmailAndPassword(auth, registerEmail, passwordAgain)
+     console.log(user.user.uid);
+     const addUser = await setDoc(doc(db, 'users', user.user.uid), {
+       userName: userName
+     })
+     }catch (error) {
+       console.log(error.message);
+     }
+    }
 
   return(
     < div className="grid grid-cols-1 sm:grid-cols-1 h-screen w-full">
@@ -32,11 +53,11 @@ const Register = () => {
           <h2 className="text-black font-normal text-center text-4xl">Zarejestruj</h2>
           <div className="flex flex-col text-gray-400 py-4">
             <label className={'font-bold'}>Nazwa użytkownika</label>
-            <input className="rounded-lg bg-gray-300 mt-2 outline-none p-2 border-solid border-2  border-gray-400 focus:border-gray-300" type="text"/>
+            <input onChange={(e) => {setUserName(e.target.value)}} className="rounded-lg bg-gray-300 mt-2 outline-none p-2 border-solid border-2  border-gray-400 focus:border-gray-300" type="text"/>
           </div>
           <div className="flex flex-col  text-gray-400 py-4">
             <label className={'font-bold'}>Email</label>
-            <input className="rounded-lg bg-gray-300 mt-2 outline-none p-2 border-solid border-2  border-gray-400 focus:border-gray-300" type="email"/>
+            <input onChange={(e) => {setRegisterEmail(e.target.value)}} className="rounded-lg bg-gray-300 mt-2 outline-none p-2 border-solid border-2  border-gray-400 focus:border-gray-300" type="email"/>
           </div>
           <div className="flex flex-col text-gray-400 py-4">
             <label className={'font-bold'}>Hasło</label>
@@ -44,7 +65,7 @@ const Register = () => {
           </div>
           <div className="flex flex-col text-gray-400 py-4">
             <label className={'font-bold'}>Powtórz hasło</label>
-            <input value={passwordAgain} className={`rounded-lg bg-gray-300 mt-2 outline-none p-2 border-solid border-2 ${error ? 'border-red-600' : 'border-gray-400 focus:border-gray-300'}`} onChange={setPasswordAgainHandler} type="password"/>
+            <input value={passwordAgain} className={`rounded-lg bg-gray-300 mt-2 outline-none p-2 border-solid border-2 ${errorPassword ? 'border-red-600' : 'border-gray-400 focus:border-gray-300'}`} onChange={setPasswordAgainHandler} type="password"/>
           </div>
           <Link href='/auth/login'>
             <p className="cursor-pointer text-center hover:drop-shadow-md">Mam juz konto</p>
