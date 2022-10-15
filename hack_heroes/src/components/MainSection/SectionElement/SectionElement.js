@@ -11,9 +11,9 @@ export default function SectionElement ({title, description, price, id}) {
 
   function truncate() {
     const n = 60;
-    return (description.length > n) ? description.slice(0, n-1) + ' ...' : description;
+    return (description.length > n) ? description.slice(0, n-1) + '...' : description;
   }
-  
+
   return(
     <div onClick={() => {showDetailsPage(id)}} className="flex justify-around bg-white box-border cursor-pointer lg:h-80 sm:h-144">
       <div className="border-solid  border-2  border-gray-400 rounded-md drop-shadow-md hover:shadow-xl hover:bg-white-smoke grid max-w-sm grid-cols-1 justify-end items-center gap-y-4 gap-x-4 py-10 px-4 sm:px-2 sm:py-10 sm:my-7 sm:mx-10 lg:max-w-7xl lg:grid-cols-3 lg:my-4 lg:mx-6 lg:px-6 lg:py-6">
