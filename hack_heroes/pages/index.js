@@ -8,7 +8,7 @@ import { db } from '../firebase';
 export async function getServerSideProps() {
   const ordersRef = collection(db, 'Orders');
   const data = await getDocs(ordersRef);
-  const orders = data.docs.map((doc) => ({...doc.data(), id: doc.id}));
+  const orders = data.docs.map((doc) => ({ ...doc.data(), id: doc.id }));
 
   return {
     props: {
@@ -18,11 +18,13 @@ export async function getServerSideProps() {
 }
 
 export default function Home({ orders }) {
+
+
   return (
     <div className='w-10/10'>
       <Navbar />
       <CategoriesBar />
-      <MainSection orders={orders}/>
+      <MainSection orders={orders} />
       <Footer />
     </div>
   )
