@@ -1,10 +1,31 @@
 import  Link  from "next/link"
+import { useState } from "react"
 
 const Register = () => {
+
+  const [password ,setPassword] = useState('')
+  const [passwordAgain, setPasswordAgain] = useState('')
+  const [error, setError] = useState(false)
+
+  const setPasswordHandler = (e) => { 
+    setPassword(e.target.value)
+  }
+  const setPasswordAgainHandler = (e) => { 
+    setPasswordAgain(e.target.value)
+   }
+
+  const submitHandler = (e) => { 
+    e.preventDefault()
+   if(password!==passwordAgain){
+     setError(true)
+     return
+   }
+   }
+
   return(
     < div className="grid grid-cols-1 sm:grid-cols-1 h-screen w-full">
       <div className="bg-white flex flex-col justify-center">
-        <form className="md:w-96 sm:w-80 sm:h-160 drop-shadow-2xl mx-auto bg-whiteGray border-gray-400 solid border-2 p-20 sm:p-10 px-20 rounded-lg">
+        <form onSubmit={submitHandler} className="md:w-96 sm:w-80 sm:h-160 drop-shadow-2xl mx-auto bg-whiteGray border-gray-400 solid border-2 p-20 sm:p-10 px-20 rounded-lg">
           <h2 className="text-black font-normal text-center text-4xl">Zarejestruj</h2>
           <div className="flex flex-col text-gray-400 py-4">
             <label className={'font-bold'}>Nazwa użytkownika</label>
@@ -16,11 +37,11 @@ const Register = () => {
           </div>
           <div className="flex flex-col text-gray-400 py-4">
             <label className={'font-bold'}>Hasło</label>
-            <input className="rounded-lg bg-gray-300 mt-2 outline-none p-2 border-solid border-2  border-gray-400 focus:border-gray-300" type="text"/>
+            <input value={password} className="rounded-lg bg-gray-300 mt-2 outline-none p-2 border-solid border-2  border-gray-400 focus:border-gray-300" onChange={setPasswordHandler} type="password"/>
           </div>
           <div className="flex flex-col text-gray-400 py-4">
-            <label className={'font-bold'}>Powtóż hasło</label>
-            <input className="rounded-lg bg-gray-300 mt-2 outline-none p-2 border-solid border-2  border-gray-400 focus:border-gray-300" type="text"/>
+            <label className={'font-bold'}>Powtórz hasło</label>
+            <input value={passwordAgain} className={`rounded-lg bg-gray-300 mt-2 outline-none p-2 border-solid border-2 ${error ? 'border-red-600' : 'border-gray-400 focus:border-gray-300'}`} onChange={setPasswordAgainHandler} type="password"/>
           </div>
           <Link href='/auth/login'>
             <p className="cursor-pointer text-center hover:drop-shadow-md">Mam juz konto</p>

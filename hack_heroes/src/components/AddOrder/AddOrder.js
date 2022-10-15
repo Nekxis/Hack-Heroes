@@ -50,7 +50,7 @@ const AddOrder = () => {
                     <h2 className=" text-left lg:col-span-2 text-4xl font-bold">Dodaj nowe zlecenie</h2>
                     <div className="flex flex-col lg:col-span-2">
                         <label className={'font-bold text-2xl'}>Dodaj tytuł</label>
-                        <input ref={titleRef} required className="w-full  text-xl rounded-lg bg-gray-300 mt-2 outline-none p-2 border-solid border-2  border-gray-400 focus:border-gray-300 " type="text" />
+                        <input ref={titleRef} maxLength={30} required className="w-full  text-xl rounded-lg bg-gray-300 mt-2 outline-none p-2 border-solid border-2  border-gray-400 focus:border-gray-300 " type="text" />
                     </div>
                     <div className="flex flex-col">
                         <label className={'font-bold text-2xl'}>Dodaj Miejscowosc</label>

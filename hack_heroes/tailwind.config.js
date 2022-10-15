@@ -36,6 +36,7 @@ module.exports = {
         '9/10': '90%',
         '10/10': '100%',
         '128': '32rem',
+        '144': '36rem',
         '160': '40rem',
       },
       backgroundColor: {
