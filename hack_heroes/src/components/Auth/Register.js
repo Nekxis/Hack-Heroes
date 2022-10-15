@@ -40,6 +40,8 @@ const Register = () => {
      }
     }
 
+    console.log("essa");
+
   return(
     < div className="grid grid-cols-1 sm:grid-cols-1 h-screen w-full">
       <div className="bg-white flex flex-col justify-center">
