@@ -1,13 +1,16 @@
 import DataTab from "./Tabs/DataTab"
 import HistoryTab from "./Tabs/HistoryTab"
 import { useState } from "react";
+import {Context} from "../../Context/Context";
+import {useRouter} from "next/router";
 
 export default function MyAccount () {
   const [tabs, setTabs] = useState(true);
-
-const profilePhoto = [{
-  photo:'https://freepikpsd.com/file/2019/10/default-profile-picture-png-1-Transparent-Images.png'
-}]
+  const context = useContext(Context)
+  const router = useRouter()
+  const profilePhoto = [{
+    photo:'https://freepikpsd.com/file/2019/10/default-profile-picture-png-1-Transparent-Images.png'
+  }]
 
   return(
     <div className="flex flex-col  mx-auto justify-center items-center ">
