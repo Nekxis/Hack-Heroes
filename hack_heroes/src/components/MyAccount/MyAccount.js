@@ -1,6 +1,6 @@
 import DataTab from "./Tabs/DataTab"
 import HistoryTab from "./Tabs/HistoryTab"
-import { useState } from "react";
+import {useContext, useState} from "react";
 import {Context} from "../../Context/Context";
 import {useRouter} from "next/router";
 
