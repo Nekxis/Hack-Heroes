@@ -3,12 +3,18 @@ import  Link  from "next/link"
 
 const Login = () => {
 
+    const [loginEmail, setLoginEmail] = useState('')
+    const [loginPassword, SetLoginPassword] = useState('')
     const [error, setError] = useState(false)
 
     const submitHandler = (e) => { 
         e.preventDefault()
          setError(false)
          return
+       }
+
+       const login = async () => {
+
        }
 
     return(
@@ -18,11 +24,11 @@ const Login = () => {
                     <h2 className="text-black font-normal text-center text-4xl">Zaloguj się</h2>
                     <div className="flex flex-col  text-gray-400 py-6">
                         <label className={'font-bold'}>Email</label>
-                        <input className="rounded-lg bg-gray-300 mt-2 outline-none p-2 border-solid border-2  border-gray-400 focus:border-gray-300" type="email"/>
+                        <input onChange={(e) => {setLoginEmail(e.target.value)}} className="rounded-lg bg-gray-300 mt-2 outline-none p-2 border-solid border-2  border-gray-400 focus:border-gray-300" type="email"/>
                     </div>
                     <div className="flex flex-col text-gray-400 py-4">
                         <label className={'font-bold'}>Hasło</label>
-                        <input className={`rounded-lg bg-gray-300 mt-2 outline-none p-2 border-solid border-2  ${error ? 'border-red-600' : 'border-gray-400 focus:border-gray-300'}`} type="text"/>
+                        <input onChange={(e) => {SetLoginPassword(e.target.value)}} className={`rounded-lg bg-gray-300 mt-2 outline-none p-2 border-solid border-2  ${error ? 'border-red-600' : 'border-gray-400 focus:border-gray-300'}`} type="text"/>
                     </div>
                     <Link href='/auth/register'>
                     <h1 className="cursor-pointer text-center hover:drop-shadow-md">Nie mam jeszcze konta</h1>
