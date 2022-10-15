@@ -4,10 +4,19 @@ import MyAccountButton from "./Buttons/MyAccountButton";
 import LoginButton from "./Buttons/LoginButton";
 import {useContext} from "react";
 import {Context} from "../../Context/Context";
+import Link from 'next/link';
+import { useState } from 'react'
+import { useRouter } from 'next/router';
 
 export default function Navbar() {
+  
+    const context = useContext(Context)
+    const [query, setQuery] = useState('');
+    const router = useRouter();
+    const searchHandler = () => {
+        router.push('/search/' + query)
+    };
 
-const context = useContext(Context)
 
     return (
         <nav className='sticky top-0 right-0 w-full z-10 bg-navbar-background backdrop-blur-navbar-blur md:h-14 h-20'>
@@ -15,9 +24,9 @@ const context = useContext(Context)
                 <div className='hidden bg-black w-40 h-10 rounded text-white font-bold lg:flex justify-center items-center text-2xl'>LOGO</div>
 
                 <div className={`w-6/10 h-10 bg-white rounded-l flex items-center `}>
-                    <input  className='w-full  p-1.5 h-full outline-none text-lg bg-transparent placeholder:text-black ' type='text' placeholder='Czego dziś szukasz...' />
+                    <input onChange={(event) => setQuery(event.target.value)} className='w-full  p-1.5 h-full outline-none text-lg bg-transparent placeholder:text-black ' type='text' placeholder='Czego dziś szukasz...' />
                     <IconContext.Provider value={{ size: '2rem' }}>
-                        <div className='cursor-pointer h-10 w-1/10 text-white bg-black flex duration-300 ease-in-out justify-center items-center rounded-r hover:text-black hover:bg-darkWhite'>
+                        <div onClick={searchHandler} className='cursor-pointer h-10 w-1/10 text-white bg-black flex duration-300 ease-in-out justify-center items-center rounded-r hover:text-black hover:bg-darkWhite'>
                             <AiOutlineSearch />
                         </div>
                     </IconContext.Provider>
