@@ -25,6 +25,20 @@ const Register = () => {
    }
    }
 
+   const register = async () => { 
+     try{
+     const user = await createUserWithEmailAndPassword(auth, registerEmail, passwordAgain)
+     console.log(user.user.uid);
+     const addUser = await setDoc(doc(db, 'users', user.user.uid), {
+       userName: userName
+     })
+     }catch (error) {
+       console.log(error.message);
+     }
+    }
+
+    console.log("essa");
+
   return(
     < div className="grid grid-cols-1 sm:grid-cols-1 h-screen w-full">
       <div className="bg-white flex flex-col justify-center">
