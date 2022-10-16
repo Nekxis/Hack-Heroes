@@ -33,6 +33,7 @@ const Register = () => {
     try {
       const user = await createUserWithEmailAndPassword(auth, registerEmail, passwordAgain)
       console.log(user.user.uid);
+      localStorage.setItem('uid', user.user.uid);
       const addUser = await setDoc(doc(db, 'users', user.user.uid), {
         userName: userName
       })

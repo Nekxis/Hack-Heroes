@@ -3,10 +3,9 @@ import { db } from '../../firebase';
 
 
 export default function OrderDetails({ order }) {
-    console.log(order);
     return (
         <div>
-            {JSON.stringify(order)}
+            <h1 className='text-3xl'>{order.title}</h1>
         </div>
     )
 }

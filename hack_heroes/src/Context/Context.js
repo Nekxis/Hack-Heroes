@@ -15,12 +15,13 @@ export default function ContextProvider({ children }) {
     });
   }, []);
 
-  console.log(user);
+  console.log(user.email);
 
   const [button, setButton] = useState(true);
   const initialValues = {
     button,
     setButton,
+    user
   }
 
   return <Context.Provider value={initialValues}> {children} </Context.Provider>
