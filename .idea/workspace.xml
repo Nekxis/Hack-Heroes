@@ -5,8 +5,57 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0d3dd2ee-bc05-4759-9589-aa598ca04dbf" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hack_heroes/pages/[orderId]/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/hack_heroes/pages/[orderId]/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hack_heroes/src/components/MyAccount/.MyAccount.js.swp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hack_heroes/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hack_heroes/.idea/hack-heroes.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hack_heroes/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hack_heroes/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hack_heroes/Hack-Heroes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hack_heroes/hack_heroes/.eslintrc.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hack_heroes/hack_heroes/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hack_heroes/hack_heroes/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hack_heroes/hack_heroes/assets/images/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hack_heroes/hack_heroes/firebase.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hack_heroes/hack_heroes/next.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hack_heroes/hack_heroes/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hack_heroes/hack_heroes/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hack_heroes/hack_heroes/pages/[orderId]/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hack_heroes/hack_heroes/pages/_app.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hack_heroes/hack_heroes/pages/addOrder.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hack_heroes/hack_heroes/pages/api/hello.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hack_heroes/hack_heroes/pages/auth/login.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hack_heroes/hack_heroes/pages/auth/register.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hack_heroes/hack_heroes/pages/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hack_heroes/hack_heroes/pages/myAccount.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hack_heroes/hack_heroes/pages/search/[query].js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hack_heroes/hack_heroes/postcss.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hack_heroes/hack_heroes/public/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hack_heroes/hack_heroes/public/vercel.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hack_heroes/hack_heroes/src/Context/Context.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hack_heroes/hack_heroes/src/components/AddOrder/AddOrder.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hack_heroes/hack_heroes/src/components/Auth/Login.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hack_heroes/hack_heroes/src/components/Auth/Register.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hack_heroes/hack_heroes/src/components/Footer/Fotter.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hack_heroes/hack_heroes/src/components/MainSection/MainSection.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hack_heroes/hack_heroes/src/components/MainSection/SectionElement/SectionElement.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hack_heroes/hack_heroes/src/components/MyAccount/.MyAccount.js.swp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hack_heroes/hack_heroes/src/components/MyAccount/MyAccount.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hack_heroes/hack_heroes/src/components/MyAccount/Tabs/DataTab.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hack_heroes/hack_heroes/src/components/MyAccount/Tabs/HistoryTab.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hack_heroes/hack_heroes/src/components/Navbar/Buttons/LoginButton.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hack_heroes/hack_heroes/src/components/Navbar/Buttons/MyAccountButton.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hack_heroes/hack_heroes/src/components/Navbar/Navbar.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hack_heroes/hack_heroes/src/components/categories-bar/CategoriesBar.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hack_heroes/hack_heroes/styles/globals.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hack_heroes/hack_heroes/tailwind.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hack_heroes/pages/orderDetails/[orderId].js" beforeDir="false" afterPath="$PROJECT_DIR$/hack_heroes/pages/orderDetails/[orderId].js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hack_heroes/src/Context/Context.js" beforeDir="false" afterPath="$PROJECT_DIR$/hack_heroes/src/Context/Context.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hack_heroes/src/components/Auth/Register.js" beforeDir="false" afterPath="$PROJECT_DIR$/hack_heroes/src/components/Auth/Register.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hack_heroes/src/components/MainSection/SectionElement/SectionElement.js" beforeDir="false" afterPath="$PROJECT_DIR$/hack_heroes/src/components/MainSection/SectionElement/SectionElement.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hack_heroes/src/components/MyAccount/MyAccount.js" beforeDir="false" afterPath="$PROJECT_DIR$/hack_heroes/src/components/MyAccount/MyAccount.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hack_heroes/src/components/Navbar/Buttons/LoginButton.js" beforeDir="false" afterPath="$PROJECT_DIR$/hack_heroes/src/components/Navbar/Buttons/LoginButton.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hack_heroes/src/components/Navbar/Buttons/MyAccountButton.js" beforeDir="false" afterPath="$PROJECT_DIR$/hack_heroes/src/components/Navbar/Buttons/MyAccountButton.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hack_heroes/src/components/Navbar/Navbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/hack_heroes/src/components/Navbar/Navbar.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,7 +70,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/hack_heroes" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -37,21 +86,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;AtomConfig&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "dart.analysis.tool.window.visible": "false",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "AtomConfig",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/hack_heroes/pages" />
@@ -79,6 +129,7 @@
       <workItem from="1665857216167" duration="3000" />
       <workItem from="1665859023661" duration="8892000" />
       <workItem from="1665869301252" duration="168000" />
+      <workItem from="1665960517854" duration="302000" />
     </task>
     <servers />
   </component>
@@ -95,5 +146,8 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
 </project>
