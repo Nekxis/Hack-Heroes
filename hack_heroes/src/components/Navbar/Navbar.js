@@ -2,14 +2,13 @@ import { AiOutlineSearch } from 'react-icons/ai';
 import { IconContext } from 'react-icons/lib';
 import MyAccountButton from "./Buttons/MyAccountButton";
 import LoginButton from "./Buttons/LoginButton";
-import {useContext} from "react";
-import {Context} from "../../Context/Context";
+import { Context } from "../../Context/Context";
 import Link from 'next/link';
-import { useState } from 'react'
+import { useState, useContext } from 'react'
 import { useRouter } from 'next/router';
 
 export default function Navbar() {
-  
+
     const context = useContext(Context)
     const [query, setQuery] = useState('');
     const router = useRouter();
@@ -32,8 +31,8 @@ export default function Navbar() {
                     </IconContext.Provider>
                 </div>
 
-              {context.button && <LoginButton />}
-              {!context.button && <MyAccountButton />}
+                {context.button && <LoginButton userName={context.user.email} />}
+                {!context.button && <MyAccountButton />}
             </div>
 
             {/* Mobile version */}
