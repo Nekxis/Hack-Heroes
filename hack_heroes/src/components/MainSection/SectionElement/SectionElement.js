@@ -6,7 +6,7 @@ export default function SectionElement ({title, description, price, id}) {
   const router = useRouter();
 
   const showDetailsPage = (id) => {
-    router.push('/orderDetails/' + id);
+    router.push('/' + id);
   }
 
   function truncate() {
