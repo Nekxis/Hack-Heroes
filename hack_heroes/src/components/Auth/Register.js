@@ -1,8 +1,11 @@
-import  Link  from "next/link"
-import {useContext, useState} from "react"
-import {Context} from "../../Context/Context";
-import {useRouter} from "next/router";
-
+import Link from "next/link"
+import { useContext, useState } from "react"
+import { Context } from "../../Context/Context";
+import { useRouter } from "next/router";
+import { createUserWithEmailAndPassword } from "firebase/auth";
+import { auth } from '../../../firebase';
+import { db } from '../../../firebase';
+import { setDoc, doc } from 'firebase/firestore';
 const Register = () => {
 
   const [password, setPassword] = useState('');
