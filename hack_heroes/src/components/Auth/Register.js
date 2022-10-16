@@ -2,12 +2,18 @@ import Link from "next/link"
 import { useContext, useState } from "react"
 import { Context } from "../../Context/Context";
 import { useRouter } from "next/router";
+import { createUserWithEmailAndPassword } from "firebase/auth";
+import { auth } from '../../../firebase';
+import { db } from '../../../firebase';
+import { setDoc, doc } from 'firebase/firestore';
 
 const Register = () => {
 
-  const [password, setPassword] = useState('')
-  const [passwordAgain, setPasswordAgain] = useState('')
-  const [error, setError] = useState(false)
+  const [password, setPassword] = useState('');
+  const [passwordAgain, setPasswordAgain] = useState('');
+  const [registerEmail, setRegisterEmail] = useState('');
+  const [userName, setUserName] = useState('');
+  const [error, setError] = useState(false);
 
   const setPasswordHandler = (e) => {
     setPassword(e.target.value)
@@ -16,16 +22,14 @@ const Register = () => {
     setPasswordAgain(e.target.value)
   }
   const context = useContext(Context)
-  const router = useRouter()
-  const submitHandler = (e) => {
+  const router = useRouter();
+
+  const submitHandler = async (e) => {
     e.preventDefault()
     if (password !== passwordAgain) {
       setError(true)
       return
     }
-  }
-
-  const register = async () => {
     try {
       const user = await createUserWithEmailAndPassword(auth, registerEmail, passwordAgain)
       console.log(user.user.uid);
@@ -37,7 +41,7 @@ const Register = () => {
     }
   }
 
-  console.log("essa");
+
 
   return (
     < div className="grid grid-cols-1 sm:grid-cols-1 h-screen w-full">
@@ -46,11 +50,11 @@ const Register = () => {
           <h2 className="text-black font-normal text-center text-4xl">Zarejestruj</h2>
           <div className="flex flex-col text-gray-400 py-4">
             <label className={'font-bold'}>Nazwa użytkownika</label>
-            <input className="rounded-lg bg-gray-300 mt-2 outline-none p-2 border-solid border-2  border-gray-400 focus:border-gray-300" type="text" />
+            <input onChange={(event) => setUserName(event.target.value) } className="rounded-lg bg-gray-300 mt-2 outline-none p-2 border-solid border-2  border-gray-400 focus:border-gray-300" type="text" />
           </div>
           <div className="flex flex-col  text-gray-400 py-4">
             <label className={'font-bold'}>Email</label>
-            <input className="rounded-lg bg-gray-300 mt-2 outline-none p-2 border-solid border-2  border-gray-400 focus:border-gray-300" type="email" />
+            <input onChange={(event) => setRegisterEmail(event.target.value) } className="rounded-lg bg-gray-300 mt-2 outline-none p-2 border-solid border-2  border-gray-400 focus:border-gray-300" type="email" />
           </div>
           <div className="flex flex-col text-gray-400 py-4">
             <label className={'font-bold'}>Hasło</label>
@@ -65,8 +69,8 @@ const Register = () => {
           </Link>
           <div className="w-full flex flex-col items-center">
             <button onClick={() => {
-              context.setButton(false);
-              router.push('/');
+              // context.setButton(false);
+              // router.push('/');
             }} className="w-1/2 justify-center drop-shadow-xl m-auto content-center text-white mt-5  py-3 bg-graphite rounded-lg hover:bg-lite-graphite focus:bg-super-lite-graphite">Zarejestruj</button>
           </div>
         </form>

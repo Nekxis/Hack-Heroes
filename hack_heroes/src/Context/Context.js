@@ -1,8 +1,21 @@
-import React, {useState} from "react";
+import React, { useState, useEffect } from "react";
+import { auth } from '../../firebase';
+import { onAuthStateChanged } from "firebase/auth";
 
 export const Context = React.createContext();
 
-export default function ContextProvider ({children}) {
+export default function ContextProvider({ children }) {
+
+  const [user, setUser] = useState({});
+
+
+  useEffect(() => {
+    onAuthStateChanged(auth, (currentUser) => {
+      setUser(currentUser)
+    });
+  }, []);
+
+  console.log(user);
 
   const [button, setButton] = useState(true);
   const initialValues = {
