@@ -1,9 +1,9 @@
-export default function DataTab ({email}) {
+export default function DataTab ({email, userName}) {
   return (
     <div className={'w-2/3 h-full flex flex-col justify-around self-start'}>
       <div className={'flex p-5 flex-col'}>
         <p className={'text-xl'}>Nazwa Użytkownika:</p>
-        <p className={'text-2xl'}>#</p>
+        <p className={'text-2xl'}>{userName}</p>
       </div>
       <div className={'flex border-t-2 border-gray-400 p-5 flex-col'}>
         <p className={'text-xl'}>Email:</p>
