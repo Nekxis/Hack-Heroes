@@ -23,7 +23,7 @@ export default function MyAccount () {
 
   useEffect(() => {
     const getUserName = async () => {
-      const docRef = await doc(db, 'users', 'kn85VsneDfVoCnXJGQA2DwFUYVp1');
+      const docRef =  doc(db, 'users', 'kn85VsneDfVoCnXJGQA2DwFUYVp1');
       const docSnap = await getDoc(docRef)
     }
     getUserName()
