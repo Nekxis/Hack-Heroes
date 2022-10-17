@@ -18,18 +18,29 @@ export default function MyAccount({ userName }) {
 
 
   return (
-    <div className="flex flex-col  mx-auto justify-center items-center ">
-      <img className="w-1/10 h-1/6 rounded-full mt-10" src={profilePhoto[0].photo}></img>
-      <h2 className="text-xl font-bold">{userName}</h2>
-      <button onClick={async () => { await signOut(auth); router.push('/') }} className="mt-16 drop-shadow-xl text-white px-12 py-4 bg-graphite rounded-lg hover:bg-lite-graphite focus:bg-super-lite-graphite">Log out</button>
-      <div className="grid lg:grid-cols-2 m-8 grid-col-1 ">
-        <button onClick={() => setTabs(true)} className="w-full px-36 py-4  border-solid border-2  border-gray-400 hover:border-gray-300 focus:border-b-black">Moje dane</button>
-        <button onClick={() => setTabs(false)} className="w-full px-36 py-4  border-solid border-2  border-gray-400 hover:border-gray-300 focus:border-b-black">Histioria moich zleceń</button>
+    <div className="flex flex-col w-full h-screen">
+      <div className={'flex w-full'}>
+        <div className="flex w-1/2 justify-start">
+          <button onClick={async () => { await router.push('/') }} className=" drop-shadow-xl text-white px-6 py-4 m-4 bg-graphite rounded-lg hover:bg-lite-graphite focus:bg-super-lite-graphite">Powrót</button>
+        </div>
+        <div className="flex w-1/2 justify-end">
+          <button onClick={async () => { await signOut(auth); router.push('/') }} className="m-4 drop-shadow-xl text-white px-6 py-4 bg-graphite rounded-lg hover:bg-lite-graphite focus:bg-super-lite-graphite">Wyloguj</button>
+        </div>
       </div>
-      <div className="flex items-center w-full justify-center">
-        {tabs && <DataTab userName={userName} email={context?.user?.email} />}
-        {!tabs && <HistoryTab />}
+      <div className="flex mt-24 lg:w-3/5 w-full h-screen self-center justify-center">
+        <div className="flex flex-col w-5/6">
+        <img className="self-center w-24 rounded-full mt-10" src={profilePhoto[0].photo}></img>
+        <h2 className="self-center m-6 text-3xl font-bold">{userName}</h2>
+        <div className="flex justify-around">
+          <button onClick={() => setTabs(true)} className="w-full h-full p-4 m-2 flex justify-center self-center items-center rounded border-solid border-2 border-gray-400 hover:border-gray-300 focus:border-b-black">Moje dane</button>
+          <button onClick={() => setTabs(false)} className="w-full h-full p-4 m-2 flex justify-center self-center items-center rounded border-solid border-2 border-gray-400 hover:border-gray-300 focus:border-b-black">Histioria moich zleceń</button>
+        </div>
+        <div className="flex w-full justify-center my-4">
+          {tabs && <DataTab userName={userName} email={context?.user?.email} />}
+          {!tabs && <HistoryTab />}
+        </div>
       </div>
+    </div>
     </div>
   )
 }

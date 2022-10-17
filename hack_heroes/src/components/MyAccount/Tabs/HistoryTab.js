@@ -3,7 +3,7 @@ import MainSection from "../../MainSection/MainSection";
 
 export default function HistoryTab () {
     return(
-        <div className="w-4/10">
+        <div className="w-2/5">
             <p>placeholder</p>
         </div>
     )
