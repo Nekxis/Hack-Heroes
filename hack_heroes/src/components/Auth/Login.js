@@ -26,10 +26,10 @@ const Login =  () => {
                     loginEmail,
                     loginPassword
                 )
+                router.push('/')
             }catch (error){
-                console.log(error.message);
                 setError(true)
-                return alert('bledny email lub haslo')
+                return
             }
         
        }
