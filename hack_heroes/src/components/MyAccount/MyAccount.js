@@ -20,7 +20,7 @@ export default function MyAccount({ userName }) {
   return (
     <div className="grid grid-cols-2 w-screen">
       <div className="h-1/2 grid justify-items-start ">
-        <button onClick={async () => { await router.push('/') }} className=" drop-shadow-xl text-white px-6 py-4 m-4 bg-graphite rounded-lg hover:bg-lite-graphite focus:bg-super-lite-graphite">powrot</button>
+        <button onClick={async () => { await router.push('/') }} className=" drop-shadow-xl text-white px-6 py-4 m-4 bg-graphite rounded-lg hover:bg-lite-graphite focus:bg-super-lite-graphite">Powrot</button>
       </div>
       <div className="h-1/2 grid justify-end">
         <button onClick={async () => { await signOut(auth); router.push('/') }} className="m-4 drop-shadow-xl text-white px-6 py-4 bg-graphite rounded-lg hover:bg-lite-graphite focus:bg-super-lite-graphite">Wyloguj</button>
