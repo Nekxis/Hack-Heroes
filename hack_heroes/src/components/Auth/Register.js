@@ -23,6 +23,7 @@ const Register = () => {
   const context = useContext(Context)
   const router = useRouter();
 
+
   const submitHandler = async (e) => {
     e.preventDefault()
     if (password !== passwordAgain) {
@@ -36,7 +37,8 @@ const Register = () => {
       const addUser = await setDoc(doc(db, 'users', user.user.uid), {
         userName: userName
       })
-      router.push('/' + user.user.uid);
+      router.push('/');
+      cotext.setButton(true)
       context.setButton(false);
     } catch (error) {
       console.log(error.message);
@@ -51,7 +53,7 @@ const Register = () => {
       <div className="bg-white flex flex-col justify-center">
         <form onSubmit={submitHandler} className="md:w-96 sm:w-80 sm:h-160 drop-shadow-2xl mx-auto bg-whiteGray border-gray-400 solid border-2 p-20 sm:p-10 px-20 rounded-lg">
           <h2 className="text-black font-normal text-center text-4xl">Zarejestruj</h2>
-          <div className="flex flex-col text-gray-400 py-4">
+          <div className="flex flex-col text-gray-400 pb-4 pt-6">
             <label className={'font-bold'}>Nazwa użytkownika</label>
             <input onChange={(event) => setUserName(event.target.value) } className="rounded-lg bg-gray-300 mt-2 outline-none p-2 border-solid border-2  border-gray-400 focus:border-gray-300" type="text" />
           </div>
@@ -72,8 +74,7 @@ const Register = () => {
           </Link>
           <div className="w-full flex flex-col items-center">
             <button onClick={() => {
-              //
-              //
+              context.setButton(true)
             }} className="w-1/2 justify-center drop-shadow-xl m-auto content-center text-white mt-5  py-3 bg-graphite rounded-lg hover:bg-lite-graphite focus:bg-super-lite-graphite">Zarejestruj</button>
           </div>
         </form>
