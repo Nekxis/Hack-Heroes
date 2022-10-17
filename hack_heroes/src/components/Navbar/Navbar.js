@@ -31,8 +31,8 @@ export default function Navbar() {
                 </div>
 
 
-                 {!context.button && <LoginButton />}
-                {context.button && <MyAccountButton />}
+                 {!context.user && <LoginButton />}
+                {context.user && <MyAccountButton />}
             </div>
 
             {/* Mobile version */}

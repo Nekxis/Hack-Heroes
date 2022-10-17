@@ -26,10 +26,11 @@ const Login =  () => {
                     loginEmail,
                     loginPassword
                 )
+                router.push('/' + user.user.uid)
             }catch (error){
                 console.log(error.message);
                 setError(true)
-                return alert('bledny email lub haslo')
+                return
             }
         
        }
@@ -61,10 +62,7 @@ const Login =  () => {
                     <h1 className="cursor-pointer text-center hover:drop-shadow-md">Nie mam jeszcze konta</h1>
                     </Link>
                     <div className="w-full flex flex-col items-center">
-                      <button onClick={()=> {
-                        context.setButton(true);
-                        router.push('/');
-                      }} className="w-1/2 justify-center drop-shadow-xl m-auto content-center text-white mt-6 py-3 bg-graphite rounded-lg hover:bg-lite-graphite focus:bg-super-lite-graphite">Zaloguj</button>
+                      <button  className="w-1/2 justify-center drop-shadow-xl m-auto content-center text-white mt-6 py-3 bg-graphite rounded-lg hover:bg-lite-graphite focus:bg-super-lite-graphite">Zaloguj</button>
                     </div>
                 </form>
             </div>
