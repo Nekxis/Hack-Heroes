@@ -4,6 +4,7 @@ import CategoriesBar from '../src/components/categories-bar/CategoriesBar';
 import Footer from "../src/components/Footer/Fotter";
 import { collection, getDocs } from 'firebase/firestore';
 import { db } from '../firebase';
+import AddOrderButton from "../src/components/AddOrderButton/AddOrderButton";
 
 export async function getServerSideProps() {
   const ordersRef = collection(db, 'Orders');
@@ -22,6 +23,7 @@ export default function Home({ orders }) {
 
   return (
     <div className='w-10/10'>
+      <AddOrderButton />
       <Navbar />
       <CategoriesBar />
       <MainSection orders={orders} />
