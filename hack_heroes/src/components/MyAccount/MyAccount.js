@@ -3,8 +3,6 @@ import HistoryTab from "./Tabs/HistoryTab"
 import { useContext, useState, useEffect } from "react";
 import { Context } from "../../Context/Context";
 import { useRouter } from "next/router";
-import { doc, getDoc } from 'firebase/firestore';
-import { db } from "../../../firebase";
 import { auth } from '../../../firebase';
 import { signOut } from "firebase/auth";
 export default function MyAccount({ userName }) {
