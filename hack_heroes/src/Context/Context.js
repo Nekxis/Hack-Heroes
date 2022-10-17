@@ -12,7 +12,7 @@ export default function ContextProvider({ children }) {
 
   const [user, setUser] = useState({});
   const [userName, setUserName] = useState();
-
+  const [button, setButton] = useState(false);
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
@@ -24,7 +24,6 @@ export default function ContextProvider({ children }) {
 
   console.log(user);
 
-  const [button, setButton] = useState(true);
   const initialValues = {
     button,
     setButton,

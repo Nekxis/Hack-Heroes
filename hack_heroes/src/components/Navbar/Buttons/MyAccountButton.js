@@ -15,8 +15,8 @@ export default function MyAccountButton() {
           <HiUserCircle />
         </div>
       </IconContext.Provider>
-      <Link href={`/${context.user.uid}`}>
-        <p className='text-inherit font-bold text-lg '></p>
+      <Link href={`${context.user ? `/${context?.user?.uid}` : `/auth/login` }`}>
+        <p className='text-inherit font-bold text-lg '>My account</p>
       </Link>
     </div>
   )

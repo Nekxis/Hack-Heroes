@@ -3,10 +3,8 @@ import { IconContext } from 'react-icons/lib';
 import MyAccountButton from "./Buttons/MyAccountButton";
 import LoginButton from "./Buttons/LoginButton";
 import { Context } from "../../Context/Context";
-import Link from 'next/link';
-import { useState, useContext } from 'react'
+import { useState, useContext } from 'react';
 import { useRouter } from 'next/router';
-import { HiUserCircle } from 'react-icons/hi';
 
 export default function Navbar() {
 
@@ -31,21 +29,10 @@ export default function Navbar() {
                         </div>
                     </IconContext.Provider>
                 </div>
-                <div className='w-36 rounded cursor-pointer border-2 border-black text-black ease-in-out duration-500 h-10 gap-1 flex items-center justify-center hover:bg-white hover:text-black'>
-                    <IconContext.Provider value={{ size: '2rem' }}>
-                        <div className='text-inherit pr-2'>
-                            <HiUserCircle />
-                        </div>
-                    </IconContext.Provider>
-                    <Link href={`${context.user ? `/${context?.user?.uid}` : `/auth/login` }`}>
-                        <p className='text-inherit font-bold text-lg '>My account</p>
-                    </Link>
-                </div>
 
 
-
-                {/* {context.button && <LoginButton userName={context.user.email} />}
-                {!context.button && <MyAccountButton />} */}
+                 {!context.button && <LoginButton />}
+                {context.button && <MyAccountButton />}
             </div>
 
             {/* Mobile version */}
