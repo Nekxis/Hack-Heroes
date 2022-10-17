@@ -26,16 +26,13 @@ const Login = () => {
                     </div>
                     <div className="flex flex-col text-gray-400 py-4">
                         <label className={'font-bold'}>Hasło</label>
-                        <input className={`rounded-lg bg-gray-300 mt-2 outline-none p-2 border-solid border-2  ${error ? 'border-red-600' : 'border-gray-400 focus:border-gray-300'}`} type="text"/>
+                        <input className={`rounded-lg bg-gray-300 mt-2 outline-none p-2 border-solid border-2  ${error ? 'border-red-600' : 'border-gray-400 focus:border-gray-300'}`} type="password"/>
                     </div>
                     <Link href='/auth/register'>
                     <h1 className="cursor-pointer text-center hover:drop-shadow-md">Nie mam jeszcze konta</h1>
                     </Link>
                     <div className="w-full flex flex-col items-center">
-                      <button onClick={()=> {
-                        context.setButton(true);
-                        router.push('/');
-                      }} className="w-1/2 justify-center drop-shadow-xl m-auto content-center text-white mt-6 py-3 bg-graphite rounded-lg hover:bg-lite-graphite focus:bg-super-lite-graphite">Zaloguj</button>
+                      <button className="w-1/2 justify-center drop-shadow-xl m-auto content-center text-white mt-6 py-3 bg-graphite rounded-lg hover:bg-lite-graphite focus:bg-super-lite-graphite">Zaloguj</button>
                     </div>
                 </form>
             </div>
