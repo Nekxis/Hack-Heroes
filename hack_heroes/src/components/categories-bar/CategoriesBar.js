@@ -1,42 +1,42 @@
 import { useRouter } from 'next/router';
 
-
+export const categories = [
+    {
+        name: 'Motoryzacja',
+        icon: 'https://cdn.discordapp.com/attachments/969319373561012247/1030212276713693336/unknown.png'
+    },
+    {
+        name: 'Sprzątanie',
+        icon: 'https://us.123rf.com/450wm/arcady31/arcady311906/arcady31190600014/126496919-dom-sprz%C4%85tanie-wektor-ikona-na-bia%C5%82ym-tle.jpg?ver=6'
+    },
+    {
+        name: 'Elektronika',
+        icon: 'https://cdn.discordapp.com/attachments/969319373561012247/1030214090754375830/unknown.png'
+    },
+    {
+        name: 'Wolontariat',
+        icon: 'https://cdn.discordapp.com/attachments/969319373561012247/1030216024462737498/unknown.png'
+    },
+    {
+        name: 'Zakupy',
+        icon: 'https://t4.ftcdn.net/jpg/02/73/80/67/360_F_273806760_iAomZ7bkcoCNd9cF6PYkJgRFkevDXgl5.jpg'
+    },
+    {
+        name: 'Ogrodnicze',
+        icon: 'https://cdn.discordapp.com/attachments/969319373561012247/1030216192272629850/unknown.png'
+    },
+    {
+        name: 'Opieka',
+        icon: 'https://cdn-icons-png.flaticon.com/512/46/46108.png'
+    },
+    {
+        name: 'Inne',
+        icon: 'https://static.thenounproject.com/png/658625-200.png'
+    }
+];
 export default function CategoriesBar() {
 
-    const categories = [
-        {
-            name: 'Motoryzacja',
-            icon: 'https://cdn.discordapp.com/attachments/969319373561012247/1030212276713693336/unknown.png'
-        },
-        {
-            name: 'Sprzątanie',
-            icon: 'https://us.123rf.com/450wm/arcady31/arcady311906/arcady31190600014/126496919-dom-sprz%C4%85tanie-wektor-ikona-na-bia%C5%82ym-tle.jpg?ver=6'
-        },
-        {
-            name: 'Elektronika',
-            icon: 'https://cdn.discordapp.com/attachments/969319373561012247/1030214090754375830/unknown.png'
-        },
-        {
-            name: 'Wolontariat',
-            icon: 'https://cdn.discordapp.com/attachments/969319373561012247/1030216024462737498/unknown.png'
-        },
-        {
-            name: 'Zakupy',
-            icon: 'https://t4.ftcdn.net/jpg/02/73/80/67/360_F_273806760_iAomZ7bkcoCNd9cF6PYkJgRFkevDXgl5.jpg'
-        },
-        {
-            name: 'Ogrodnicze',
-            icon: 'https://cdn.discordapp.com/attachments/969319373561012247/1030216192272629850/unknown.png'
-        },
-        {
-            name: 'Opieka',
-            icon: 'https://cdn-icons-png.flaticon.com/512/46/46108.png'
-        },
-        {
-            name: 'Inne',
-            icon: 'https://static.thenounproject.com/png/658625-200.png'
-        }
-    ];
+    
 
     const router = useRouter();
 

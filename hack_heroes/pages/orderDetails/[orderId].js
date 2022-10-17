@@ -8,7 +8,7 @@ export default function OrderDetails({ order }) {
       <div className={'flex h-screen w-full '}>
         <div className={'grid grid-cols-3 grid-rows-3 h-2/3 w-full px-16 self-center'}>
           <div className={'flex flex-col col-span-1 row-span-1'}>
-            <img src="#" alt="#"/>
+            <img src={`/categories_image/${order.category}.png`} alt="#" className='w-1/2'/>
             <div className={''}>{order.category}</div>
           </div>
           <div className={'flex flex-col col-span-2 row-span-1 items-end '}>
