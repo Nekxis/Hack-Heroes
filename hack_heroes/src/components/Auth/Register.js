@@ -54,7 +54,7 @@ const Register = () => {
       <div className="bg-white flex flex-col justify-center">
         <form onSubmit={submitHandler} className="md:w-96 sm:w-80 sm:h-160 drop-shadow-2xl mx-auto bg-whiteGray border-gray-400 solid border-2 p-20 sm:p-10 px-20 rounded-lg">
           <h2 className="text-black font-normal text-center text-4xl">Zarejestruj</h2>
-          <div className="flex flex-col text-gray-400 pb-4 pt-6">
+          <div className="flex flex-col text-black pb-4 pt-6">
             <label className={'font-bold'}>Nazwa użytkownika</label>
             <input onChange={(event) => setUserName(event.target.value) } className="rounded-lg bg-gray-300 mt-2 outline-none p-2 border-solid border-2  border-gray-400 focus:border-gray-300" type="text" />
           </div>
