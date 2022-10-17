@@ -44,9 +44,11 @@ const AddOrder = () => {
     }
 
     return (
+        <div>
+            <button onClick={async () => { await router.push('/') }} className="fixed drop-shadow-xl text-white px-6 py-4 m-4 bg-graphite rounded-lg hover:bg-lite-graphite focus:bg-super-lite-graphite">Powrót</button>
         <div className="h-screen w-9/10 flex flex-col mx-auto justify-center items-center">
             <div className="flex justify-center items-center">
-                <form onSubmit={handleSubmit} className=" border-solid border-2 border-gray-400 grid lg:grid-cols-2 sm:grid-col-1 drop-shadow-md gap-12 w-full rounded-lg shadow-md bg-white-smoke p-10 ">
+                <form onSubmit={handleSubmit} className="  border-solid border-2 border-gray-400 grid lg:grid-cols-2 sm:grid-col-1 drop-shadow-md gap-12 w-full rounded-lg shadow-md bg-white-smoke p-10 ">
                     <h2 className=" text-left lg:col-span-2 text-4xl font-bold">Dodaj nowe zlecenie</h2>
                     <div className="flex flex-col lg:col-span-2">
                         <label className={'font-bold text-2xl'}>Dodaj tytuł</label>
@@ -86,6 +88,7 @@ const AddOrder = () => {
                 </form>
 
             </div>
+        </div>
         </div>
     )
  }
