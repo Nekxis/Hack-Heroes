@@ -5,10 +5,11 @@ import { db } from '../../firebase';
 export default function OrderDetails({ order }) {
     console.log(order);
     return (
+
       <div className={'flex h-screen w-full'}>
         <div className={'grid md:grid-cols-3 grid-cols-1 grid-rows-3 md:h-2/3 h-full w-full md:px-16 px-8 self-center sm:pt-8 md:self-center sm:self-start'}>
           <div className={'flex flex-col col-span-1 row-span-1 sm:justify-center md:items-start sm:items-center'}>
-            <img src="#" alt="#"/>
+            <img src={`/categories_image/${order.category}.png`} alt="#" className='w-1/2'/>
             <div className={'border-black border-solid border-t-2 mt-2'}>{order.category}</div>
           </div>
           <div className={'flex flex-col md:col-span-2 row-span-1 items-end '}>

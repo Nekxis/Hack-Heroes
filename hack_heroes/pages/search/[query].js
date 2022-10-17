@@ -10,6 +10,8 @@ export async function getServerSideProps(context) {
     const querySnapshot = await getDocs(categoryQuery);
     const filteredOrders = querySnapshot.docs.map((doc) => ({ ...doc.data(), id: doc.id })); 0
 
+    
+
     return {
         props: {
             filteredOrders
