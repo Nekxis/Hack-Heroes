@@ -5,7 +5,7 @@ import { Context } from "../../Context/Context";
 import { useRouter } from "next/router";
 import { auth } from '../../../firebase';
 import { signOut } from "firebase/auth";
-export default function MyAccount({ userName }) {
+export default function MyAccount({ userName, userOrders }) {
 
   const [tabs, setTabs] = useState(true);
   const context = useContext(Context)
@@ -37,7 +37,7 @@ export default function MyAccount({ userName }) {
         </div>
         <div className="flex w-full justify-center my-4">
           {tabs && <DataTab userName={userName} email={context?.user?.email} />}
-          {!tabs && <HistoryTab />}
+          {!tabs && <HistoryTab orders={userOrders} />}
         </div>
       </div>
     </div>

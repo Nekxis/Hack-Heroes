@@ -1,24 +1,30 @@
 import MyAccount from "../src/components/MyAccount/MyAccount";
 import { db } from "../firebase";
-import { doc, getDoc } from 'firebase/firestore';
+import { doc, getDoc, query, collection, where, getDocs } from 'firebase/firestore';
 
 export async function getServerSideProps(context) {
   const uid = context.params.uid;
+  const ordersRef = collection(db, 'Orders');
+
+  const usersQuery = query(ordersRef, where("user", "==", uid));
+  const dataSnapshot = await getDocs(usersQuery);
+  const userOrders = dataSnapshot.docs.map((doc) => ({ ...doc.data(), id: doc.id })); 
   const docRef = doc(db, 'users', uid);
   const docSnap = await getDoc(docRef);
 
   return {
     props: {
-      data: docSnap.data()
+      orders: docSnap.data(),
+      userOrders
     }
   }
 }
 
-export default function UserDashboard({ data }) {
-  console.log(data.userName);
+export default function UserDashboard({ orders, userOrders }) {
+  console.log(orders.userName, userOrders);
   return (
     <div>
-      <MyAccount userName={data.userName}/>
+      <MyAccount userName={orders.userName} userOrders={userOrders}/>
     </div>
   )
 }

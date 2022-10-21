@@ -8,7 +8,7 @@ export async function getServerSideProps(context) {
 
     const categoryQuery = query(ordersRef, where("category", "==", category));
     const querySnapshot = await getDocs(categoryQuery);
-    const filteredOrders = querySnapshot.docs.map((doc) => ({ ...doc.data(), id: doc.id })); 0
+    const filteredOrders = querySnapshot.docs.map((doc) => ({ ...doc.data(), id: doc.id })); 
 
     
 

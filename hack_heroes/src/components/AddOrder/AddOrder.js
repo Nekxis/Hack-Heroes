@@ -1,20 +1,21 @@
-import { useRef } from 'react';
+import { useRef, useContext } from 'react';
 import { useRouter } from 'next/router';
 import { db } from '../../../firebase';
 import { collection, addDoc } from 'firebase/firestore';
+import { Context } from '../../Context/Context';
 const AddOrder = () => {
 
 
 
     const router = useRouter();
-
+    const context = useContext(Context);
     const titleRef = useRef();
     const cityRef = useRef();
     const categoryRef = useRef();
     const priceRef = useRef();
     const phoneNumberRef = useRef();
     const descriptionRef = useRef();
-
+    console.log(context.user);
     const ordersRef = collection(db, 'Orders');
 
     const handleSubmit = async (e) => {
@@ -27,6 +28,7 @@ const AddOrder = () => {
             price: priceRef.current.value,
             phoneNumber: phoneNumberRef.current.value,
             description: descriptionRef.current.value,
+            
         }
 
         await addDoc(ordersRef,
@@ -36,7 +38,8 @@ const AddOrder = () => {
                 description: enteredValues.description,
                 city: enteredValues.city,
                 category: enteredValues.category,
-                phoneNumber: enteredValues.phoneNumber
+                phoneNumber: enteredValues.phoneNumber,
+                user: context.user.uid
             });
 
         router.replace('/');
