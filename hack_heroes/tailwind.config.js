@@ -10,6 +10,7 @@ module.exports = {
         md: '768px',
         lg: '1048px',
         xl: '1440px',
+        xxl: '2200px',
       },
     extend: {
       width: {
@@ -38,6 +39,7 @@ module.exports = {
         '128': '32rem',
         '144': '36rem',
         '160': '40rem',
+        '192': '48rem',
       },
       backgroundColor: {
         'navbar-background': 'rgba(234, 237, 240, 0.8)',
