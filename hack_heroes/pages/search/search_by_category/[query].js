@@ -1,6 +1,6 @@
 import { useRouter } from 'next/router';
 import { query, collection, where, getDocs } from 'firebase/firestore';
-import { db } from '../../firebase';
+import { db } from '../../../firebase';
 
 export async function getServerSideProps(context) {
     const category = context.params.query;

@@ -41,7 +41,7 @@ export default function CategoriesBar() {
     const router = useRouter();
 
     const pushSearchPage = (category) => {
-        router.push('/search/' + category)
+        router.push('/search/search_by_category/' + category)
     };
 
     return (

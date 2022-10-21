@@ -11,8 +11,9 @@ export default function Navbar() {
     const context = useContext(Context)
     const [query, setQuery] = useState('');
     const router = useRouter();
+
     const searchHandler = () => {
-        router.push('/search/' + query)
+        router.push('/search/search_by_text/' + query.toLowerCase())
     };
 
 
