@@ -3,7 +3,7 @@ import {useRouter} from 'next/router'
 
 
 
-export default function SectionElement ({title, description, price, id, category}) {
+export default function SectionElement ({title, description, price, id, category, city}) {
 
   const router = useRouter();
 
@@ -33,7 +33,7 @@ export default function SectionElement ({title, description, price, id, category
           </p>
           <ul className={'flex justify-end justify-self-end items-end py-2'}>
             <li className="text-3xl font-bold px-2">{`${price} zł`}</li>
-            <li className="text-xl text-our-grey px-2">Jakub</li>
+            <li className="text-xl text-our-grey px-2">{city}</li>
           </ul>
 
         </div>
