@@ -15,6 +15,7 @@ const AddOrder = () => {
     const priceRef = useRef();
     const phoneNumberRef = useRef();
     const descriptionRef = useRef();
+
     console.log(context.user);
     const ordersRef = collection(db, 'Orders');
 
