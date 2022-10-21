@@ -1,6 +1,7 @@
 import MyAccount from "../src/components/MyAccount/MyAccount";
 import { db } from "../firebase";
 import { doc, getDoc, query, collection, where, getDocs } from 'firebase/firestore';
+import AddOrderButton from '../src/components/AddOrderButton/AddOrderButton'
 
 export async function getServerSideProps(context) {
   const uid = context.params.uid;
@@ -25,6 +26,7 @@ export default function UserDashboard({ orders, userOrders }) {
   return (
     <div>
       <MyAccount userName={orders.userName} userOrders={userOrders}/>
+      <AddOrderButton />
     </div>
   )
 }
