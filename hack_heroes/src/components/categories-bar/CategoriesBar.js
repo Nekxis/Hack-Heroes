@@ -36,7 +36,7 @@ export const categories = [
 ];
 export default function CategoriesBar() {
 
-    
+
 
     const router = useRouter();
 
