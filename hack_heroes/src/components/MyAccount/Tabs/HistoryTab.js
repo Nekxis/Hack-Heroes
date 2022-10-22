@@ -26,7 +26,7 @@ export default function HistoryTab ({orders}) {
 
                          </div>
                       </div>
-                      <button  className=" drop-shadow-xl text-white px-6 sm:w-1/9 py-4 my-4 bg-red-600 rounded-lg hover:bg-red-500 focus:bg-red700">
+                      <button  className=" drop-shadow-xl text-white px-6 sm:w-1/9 py-4 my-4 bg-red-600 rounded-lg hover:bg-red-700 focus:bg-red-500">
                         <IconContext.Provider value={{ size: '2rem'}}>
                           <div>
                             <GrClose />
