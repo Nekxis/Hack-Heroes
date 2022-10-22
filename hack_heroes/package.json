@@ -2,7 +2,7 @@
   "name": "hack_heroes",
   "version": "0.1.0",
   "private": true,
-  "license": "UNLICENSED",
+  "licence": "MIT",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
