@@ -29,7 +29,7 @@ const AddOrder = () => {
             price: priceRef.current.value,
             phoneNumber: phoneNumberRef.current.value,
             description: descriptionRef.current.value,
-            
+
         }
 
         await addDoc(ordersRef,
@@ -78,11 +78,11 @@ const AddOrder = () => {
                     </div>
                     <div className="flex flex-col">
                         <label className={'font-bold text-2xl'}>Cena</label>
-                        <input required ref={priceRef} className=" w-96 text-xl rounded-lg bg-gray-300 mt-2 outline-none p-2 border-solid border-2 border-gray-400 focus:border-gray-300" type="number" />
+                        <input required ref={priceRef} className=" w-96 text-xl rounded-lg bg-gray-300 mt-2 outline-none p-2 border-solid border-2 border-gray-400 focus:border-gray-300" type="number" min="1" max="500"/>
                     </div>
                     <div className="flex flex-col">
                         <label className={'font-bold text-2xl'}>Numer telefonu</label>
-                        <input required ref={phoneNumberRef} className=" w-96 text-xl rounded-lg bg-gray-300 mt-2 outline-none p-2 border-solid border-2 border-gray-400 focus:border-gray-300" type="tel" pattern='[0-9]{3}-[0-9]{3}-[0-9]{3}' />
+                        <input required ref={phoneNumberRef} className=" w-96 text-xl rounded-lg bg-gray-300 mt-2 outline-none p-2 border-solid border-2 border-gray-400 focus:border-gray-300" type="tel" pattern='[0-9]{3} [0-9]{3} [0-9]{3}' />
                     </div>
                     <div className="flex flex-col lg:col-span-2">
                         <label className={'font-bold text-2xl'}>Opis</label>
