@@ -1,10 +1,10 @@
 export default function Footer () {
   return (
     <div className={'sm:hidden h-72  w-full bg-black md:flex justify-around'}>
-      <div className={'md:w-1/3 h-full flex'}>
-        <p className={'text-white text-3xl :px-14 py-16'}>
-          Logo
-        </p>
+      <div className={'md:w-1/5 justify-center items-center h-2/3 flex'}>
+        <div className='hidden bg-black w-44 h-14 rounded text-white font-bold lg:flex justify-center items-center text-2xl'>
+          <img className='rounded self-center h-full' src='/logo.png' alt='' />
+        </div>
       </div>
       <div className={'md:w-1/6 x-1/5 h-full flex flex-col py-14'}>
         <p className={'text-white flex self-start m-0 py-4'}>
