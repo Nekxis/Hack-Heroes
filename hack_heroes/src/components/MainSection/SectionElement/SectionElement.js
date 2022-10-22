@@ -27,7 +27,7 @@ export default function SectionElement ({title, description, price, id, category
               />
         </div>
         <div className={'lg:col-span-2'}>
-          <h2 className="text-3xl font-bold text-end tracking-tight text-gray-900 sm:text-4xl hover:underline hover:cursor-pointer capitalize">{title}</h2>
+          <h2 className="md:text-3xl font-bold text-end tracking-tight text-gray-900 sm:text-4xl hover:underline hover:cursor-pointer capitalize">{title}</h2>
           <p className="mt-4 text-end text-lg text-gray-500">
            {truncate()}
           </p>
