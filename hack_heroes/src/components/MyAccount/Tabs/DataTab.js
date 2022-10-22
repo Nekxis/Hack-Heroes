@@ -15,7 +15,8 @@ export default function DataTab ({email, userName}) {
   const changePasswordHandler = () => {
     console.log(context.user.email);
     sendPasswordResetEmail(auth, context.user.email)
-    alert('Twoje haslo zostalo wyslane na mail')
+    alert('Twój link do zresetowania hasła został wysłany na twój email (sprawdź folder spam)')
+    router.push('/auth/login')
   }
   
   return (
