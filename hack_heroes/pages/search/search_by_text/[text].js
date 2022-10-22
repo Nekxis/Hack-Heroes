@@ -41,11 +41,11 @@ export default function TextSearchPage({ filteredOrders }) {
   const router = useRouter()
   const category = router.query
 
-  
+
   return (
     <div className={'w-full h-screen'}>
       <div className={'w-full h-1/5 flex items-center bg-white-smoke border-b-2 '}>
-        <button onClick={async () => { await router.push('/') }} className="flex drop-shadow-xl text-white md:px-6 md:py-4 md:m-4 sm:px-2 sm:py-2 sm:m-2 rounded-lg hover:bg-lite-graphite focus:bg-super-lite-graphite">
+        <button onClick={async () => { await router.push('/') }} className="flex drop-shadow-xl text-white md:px-6 md:py-4 md:m-4 sm:px-2 sm:py-2 sm:m-2 rounded-lg hover:bg-whiteGray focus:bg-gray">
           <IconContext.Provider value={{ size: '2rem' }}>
             <div className='text-inherit'>
               <GrClose />
