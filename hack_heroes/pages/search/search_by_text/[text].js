@@ -25,11 +25,12 @@ export async function getServerSideProps(context) {
         return order.description.includes(query)
     });
 
-    // const filteredOrders = [...filteredOrdersWithTitle, ...filteredOrdersWithCity, ...filteredOrdersWithDescription]
-    const filteredOrders = Object.assign(filteredOrdersWithTitle, filteredOrdersWithCity, filteredOrdersWithDescription)
+    const filteredOrders = [...filteredOrdersWithTitle, ...filteredOrdersWithCity, ...filteredOrdersWithDescription]
+    // const filteredOrders = Object.assign(filteredOrdersWithTitle, filteredOrdersWithCity, filteredOrdersWithDescription)
+
     return {
         props: {
-            data: filteredOrders,
+          filteredOrders,
         }
     }
 }
@@ -52,11 +53,11 @@ export default function TextSearchPage({filteredOrders}) {
           </IconContext.Provider>
         </button>
         <div className={'flex lg:w-52 sm:w-1/5 '}>
-          {/*<img*/}
-          {/*  src={`/categories_image/${category.query}.png`}*/}
-          {/*  alt={''}*/}
-          {/*  className="flex rounded-lg bg-gray-100 shadow-md"*/}
-          {/*/>*/}
+          <img
+            src={'/categories_image/search.png'}
+            alt={'search'}
+            className="flex rounded-lg bg-gray-100 shadow-md"
+          />
         </div>
         <p className={'flex w-1/6 md:p-10 sm:p-6 text-3xl '}>
           Rezultat wyszukiwania
