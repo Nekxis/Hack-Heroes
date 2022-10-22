@@ -18,7 +18,7 @@ export default function Navbar() {
 
 
     return (
-        <nav className='sticky top-0 right-0 w-full z-10 bg-navbar-background backdrop-blur-navbar-blur md:h-14 h-20'>
+        <nav className='sticky top-0 right-0 w-full z-10 bg-navbar-background backdrop-blur-navbar-blur md:h-14 h-20 pr-2'>
             <div className='hidden h-full py-2 gap-14 w-full md:flex items-center justify-center'>
                 <div className='hidden bg-black w-40 h-10 rounded text-white font-bold lg:flex justify-center items-center text-2xl'>
                     <img className='rounded' src='/logo.png' alt='' />

@@ -1,9 +1,16 @@
 import { IconContext } from "react-icons/lib";
 import { GrClose } from "react-icons/gr";
-import { doc,delateDoc } from "@firebase/firestore";
+import { doc,deleteDoc } from "@firebase/firestore";
+import { db } from "../../../../firebase";
+import { useRouter } from "next/router";
 
 export default function HistoryTab ({orders}) {
-   if(orders[0]===undefined){ return <h2 className="mt-4 text-2xl text-our-grey px-2">Nie Dodałeś jeszcze zadnego zlecenia :(</h2>}
+  const router = useRouter()
+   if(orders[0]===undefined){ return <h2 className="mt-4 sm:text-2xl text-our-grey px-2 lg:text-sm">Nie Dodałeś jeszcze zadnego zlecenia :(</h2>}
+    const deleteDocHandler = async (id) => { 
+      await deleteDoc(doc(db, "Orders", id))
+      router.reload()
+     }
     return(
         <div className="w-full">
             {orders.map((order) => {
@@ -27,7 +34,7 @@ export default function HistoryTab ({orders}) {
 
                          </div>
                       </div>
-                      <button  className=" drop-shadow-xl text-white px-6 sm:w-1/9 py-4 my-4 bg-red-600 rounded-lg hover:bg-red-700 focus:bg-red-500">
+                      <button onClick={() => { deleteDocHandler(order.id)}} className=" drop-shadow-xl text-white px-6 sm:w-1/9 py-4 my-4 bg-red-600 rounded-lg hover:bg-red-700 focus:bg-red-500">
                         <IconContext.Provider value={{ size: '2rem'}}>
                           <div>
                             <GrClose />
