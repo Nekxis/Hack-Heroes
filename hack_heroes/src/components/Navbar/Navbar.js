@@ -40,9 +40,9 @@ export default function Navbar() {
 
             {/* Mobile version */}
             <div className='flex md:hidden py-3 w-full justify-center items-center h-full'>
-                <input className='w-8/10 rounded-l outline-none text-lg p-2 placeholder:text-black' type='text' placeholder='Czego dziś szukasz...' />
+                <input onChange={(event) => setQuery(event.target.value)} className='w-8/10 rounded-l outline-none text-lg p-2 placeholder:text-black' type='text' placeholder='Czego dziś szukasz...' />
                 <IconContext.Provider value={{ size: '1.5rem' }}>
-                    <div className='cursor-pointer flex items-center justify-center bg-black px-3 py-2 rounded-r text-white' style={{ height: '44px' }}>
+                    <div onClick={searchHandler} className='cursor-pointer flex items-center justify-center bg-black px-3 py-2 rounded-r text-white' style={{ height: '44px' }}>
                         <AiOutlineSearch />
                     </div>
                 </IconContext.Provider>

@@ -2,6 +2,7 @@ import Navbar from '../src/components/Navbar/Navbar';
 import MainSection from "../src/components/MainSection/MainSection";
 import CategoriesBar from '../src/components/categories-bar/CategoriesBar';
 import Footer from "../src/components/Footer/Fotter";
+import MobileNavbar from '../src/components/Footer/mobile-navbar';
 import { collection, getDocs } from 'firebase/firestore';
 import { db } from '../firebase';
 import AddOrderButton from "../src/components/AddOrderButton/AddOrderButton";
@@ -28,6 +29,7 @@ export default function Home({ orders }) {
       <CategoriesBar />
       <MainSection orders={orders} />
       <Footer />
+      <MobileNavbar />
     </div>
   )
 }

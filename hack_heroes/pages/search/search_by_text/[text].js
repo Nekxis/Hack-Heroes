@@ -1,47 +1,47 @@
 import { db } from "../../../firebase";
 import { collection, getDocs } from "firebase/firestore";
-import {useRouter} from "next/router";
-import {IconContext} from "react-icons/lib";
-import {GrClose} from "react-icons/gr";
+import { useRouter } from "next/router";
+import { IconContext } from "react-icons/lib";
+import { GrClose } from "react-icons/gr";
 import MainSection from "../../../src/components/MainSection/MainSection";
 
 export async function getServerSideProps(context) {
-    const query = context.params.text;
+  const query = context.params.text;
 
-    const ordersRef = collection(db, 'Orders');
-    const data = await getDocs(ordersRef);
-    const orders = data.docs.map((doc) => ({ ...doc.data(), id: doc.id }));
+  const ordersRef = collection(db, 'Orders');
+  const data = await getDocs(ordersRef);
+  const orders = data.docs.map((doc) => ({ ...doc.data(), id: doc.id }));
 
-    const lowerCaseStrings = orders.map((order) => {
-        return {...order, title: order.title.toLowerCase(), city: order.city.toLowerCase(), description: order.description.toLowerCase()};
-    });
-    const filteredOrdersWithTitle = lowerCaseStrings.filter((order) => {
-        return order.title.includes(query)
-    });
-    const filteredOrdersWithCity = lowerCaseStrings.filter((order) => {
-        return order.city.includes(query)
-    });
-    const filteredOrdersWithDescription = lowerCaseStrings.filter((order) => {
-        return order.description.includes(query)
-    });
+  const lowerCaseStrings = orders.map((order) => {
+    return { ...order, title: order.title.toLowerCase(), city: order.city.toLowerCase(), description: order.description.toLowerCase() };
+  });
+  const filteredOrdersWithTitle = lowerCaseStrings.filter((order) => {
+    return order.title.includes(query)
+  });
+  const filteredOrdersWithCity = lowerCaseStrings.filter((order) => {
+    return order.city.includes(query)
+  });
+  const filteredOrdersWithDescription = lowerCaseStrings.filter((order) => {
+    return order.description.includes(query)
+  });
 
-    const filteredOrders = [...filteredOrdersWithTitle, ...filteredOrdersWithCity, ...filteredOrdersWithDescription]
-    // const filteredOrders = Object.assign(filteredOrdersWithTitle, filteredOrdersWithCity, filteredOrdersWithDescription)
+  const filteredOrders = [...filteredOrdersWithTitle, ...filteredOrdersWithCity, ...filteredOrdersWithDescription]
 
-    return {
-        props: {
-          filteredOrders,
-        }
+  return {
+    props: {
+       filteredOrders,
     }
+  }
 }
 
 
 
-export default function TextSearchPage({filteredOrders}) {
+export default function TextSearchPage({ filteredOrders }) {
 
   const router = useRouter()
   const category = router.query
 
+  
   return (
     <div className={'w-full h-screen'}>
       <div className={'w-full h-1/5 flex items-center bg-white-smoke border-b-2 '}>

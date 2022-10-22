@@ -26,7 +26,6 @@ export default function UserDashboard({ orders, userOrders }) {
   return (
     <div>
       <MyAccount userName={orders.userName} userOrders={userOrders}/>
-      <AddOrderButton />
     </div>
   )
 }
