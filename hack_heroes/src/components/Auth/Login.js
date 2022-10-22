@@ -33,7 +33,6 @@ const Login =  () => {
             }
         
        }
-
        const toggle = () => { 
            setOpen(!open)
         }
@@ -61,8 +60,11 @@ const Login =  () => {
                     <Link href='/auth/register'>
                     <h1 className="cursor-pointer text-center hover:drop-shadow-md">Nie mam jeszcze konta</h1>
                     </Link>
+                    <Link href='/auth/resetPassword'>
+                    <h1 className="cursor-pointer mt-6 text-center hover:drop-shadow-md">Zresetuj hasło</h1>
+                    </Link>
                     <div className="w-full flex flex-col items-center">
-                      <button className="w-1/2 justify-center drop-shadow-xl m-auto content-center text-white xxl:mt-10 mt-6 py-3 bg-graphite rounded-lg hover:bg-lite-graphite focus:bg-super-lite-graphite">Zaloguj</button>
+                      <button className="w-1/2 justify-center drop-shadow-xl m-auto content-center text-white xxl:mt-4 mt-6 py-3 bg-graphite rounded-lg hover:bg-lite-graphite focus:bg-super-lite-graphite">Zaloguj</button>
                     </div>
                 </form>
             </div>
