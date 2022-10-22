@@ -8,7 +8,6 @@ import { useRouter } from "next/router";
 export default function DataTab ({email, userName, orders}) {
   const context = useContext(Context)
   const router = useRouter();
-  console.log(orders);
   const deleteUserHandler = async () => { 
     if (orders[0]) {
       alert ('Usun wszystkie zlecenia!')
