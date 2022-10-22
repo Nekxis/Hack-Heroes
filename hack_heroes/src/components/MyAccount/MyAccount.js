@@ -38,7 +38,7 @@ export default function MyAccount({ userName, userOrders }) {
           <button onClick={() => setTabs(false)} className={`w-full h-full p-4 m-2 flex justify-center self-center items-center rounded-lg border-solid border-2 border-gray-400 hover:border-gray-300 ${!tabs && 'bg-black text-white'}`}>Histioria moich zleceń</button>
         </div>
         <div className="flex w-full justify-center my-4">
-          {tabs && <DataTab userName={userName} email={context?.user?.email} />}
+          {tabs && <DataTab userName={userName}  orders={userOrders} email={context?.user?.email} />}
           {!tabs && <HistoryTab  orders={userOrders} />}
         </div>
       </div>

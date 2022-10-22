@@ -6,6 +6,7 @@ import { useRouter } from "next/router";
 
 export default function HistoryTab ({orders}) {
   const router = useRouter()
+  
    if(orders[0]===undefined){ return <h2 className="mt-4 sm:text-2xl text-our-grey px-2 lg:text-sm">Nie Dodałeś jeszcze zadnego zlecenia :(</h2>}
     const deleteDocHandler = async (id) => { 
       await deleteDoc(doc(db, "Orders", id))
