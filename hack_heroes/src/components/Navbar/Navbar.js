@@ -3,7 +3,7 @@ import { IconContext } from 'react-icons/lib';
 import MyAccountButton from "./Buttons/MyAccountButton";
 import LoginButton from "./Buttons/LoginButton";
 import { Context } from "../../Context/Context";
-import { useState, useContext } from 'react';
+import {useState, useContext} from 'react';
 import { useRouter } from 'next/router';
 
 export default function Navbar() {
@@ -12,10 +12,17 @@ export default function Navbar() {
     const [query, setQuery] = useState('');
     const router = useRouter();
 
+
+
     const searchHandler = () => {
-        router.push('/search/search_by_text/' + query.toLowerCase())
+      router.push('/search/search_by_text/' + query.toLowerCase())
     };
 
+    const submitHandler = (e) =>{
+      e.preventDefault()
+      searchHandler()
+
+  }
 
     return (
         <nav className='sticky top-0 right-0 w-full z-10 bg-navbar-background backdrop-blur-navbar-blur md:h-14 h-20 pr-2'>
@@ -24,14 +31,14 @@ export default function Navbar() {
                     <img className='rounded' src='/logo.png' alt='' />
                 </div>
 
-                <div className={`w-6/10 h-10 bg-white rounded-l flex items-center `}>
-                    <input onChange={(event) => setQuery(event.target.value)} className='w-full  p-1.5 h-full outline-none text-lg bg-transparent placeholder:text-black ' type='text' placeholder='Czego dziś szukasz...' />
+                <form onSubmit={submitHandler} className={`w-6/10 h-10 bg-white rounded-l flex items-center `}>
+                    <input onChange={(event) => setQuery(event.target.value)}  className='w-full  p-1.5 h-full outline-none text-lg bg-transparent placeholder:text-black ' type='text' placeholder='Czego dziś szukasz...' />
                     <IconContext.Provider value={{ size: '2rem' }}>
-                        <div onClick={searchHandler} className='cursor-pointer h-10 w-1/10 text-white bg-black flex duration-300 ease-in-out justify-center items-center rounded-r hover:text-black hover:bg-darkWhite'>
+                        <button type={"submit"} className='cursor-pointer h-10 w-1/10 text-white bg-black flex duration-300 ease-in-out justify-center items-center rounded-r hover:text-black hover:bg-darkWhite'>
                             <AiOutlineSearch />
-                        </div>
+                        </button>
                     </IconContext.Provider>
-                </div>
+                </form>
 
 
                 {context.user && <MyAccountButton />}
