@@ -1,6 +1,6 @@
 export default function Footer () {
   return (
-    <div className={'h-72 w-full bg-black flex justify-around'}>
+    <div className={'sm:hidden h-72  w-full bg-black md:flex justify-around'}>
       <div className={'md:w-1/3 h-full flex'}>
         <p className={'text-white text-3xl :px-14 py-16'}>
           Logo
