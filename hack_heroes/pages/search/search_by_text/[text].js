@@ -1,13 +1,9 @@
 import { db } from "../../../firebase";
 import { collection, getDocs } from "firebase/firestore";
-
-export default function SearchByText({ data }) {
-
-    return <div>
-        <h1>Hello world</h1>
-        {JSON.stringify(data)}
-    </div>
-};
+import {useRouter} from "next/router";
+import {IconContext} from "react-icons/lib";
+import {GrClose} from "react-icons/gr";
+import MainSection from "../../../src/components/MainSection/MainSection";
 
 export async function getServerSideProps(context) {
     const query = context.params.text;
@@ -28,12 +24,47 @@ export async function getServerSideProps(context) {
     const filteredOrdersWithDescription = lowerCaseStrings.filter((order) => {
         return order.description.includes(query)
     });
-    
-    const filteredOrders = [...filteredOrdersWithTitle, ...filteredOrdersWithCity, ...filteredOrdersWithDescription]
 
+    // const filteredOrders = [...filteredOrdersWithTitle, ...filteredOrdersWithCity, ...filteredOrdersWithDescription]
+    const filteredOrders = Object.assign(filteredOrdersWithTitle, filteredOrdersWithCity, filteredOrdersWithDescription)
     return {
         props: {
             data: filteredOrders,
         }
     }
+}
+
+
+
+export default function TextSearchPage({filteredOrders}) {
+
+  const router = useRouter()
+  const category = router.query
+
+  return (
+    <div className={'w-full h-screen'}>
+      <div className={'w-full h-1/5 flex items-center bg-white-smoke border-b-2 '}>
+        <button onClick={async () => { await router.push('/') }} className="flex drop-shadow-xl text-white md:px-6 md:py-4 md:m-4 sm:px-2 sm:py-2 sm:m-2 rounded-lg hover:bg-lite-graphite focus:bg-super-lite-graphite">
+          <IconContext.Provider value={{ size: '2rem' }}>
+            <div className='text-inherit'>
+              <GrClose />
+            </div>
+          </IconContext.Provider>
+        </button>
+        <div className={'flex lg:w-52 sm:w-1/5 '}>
+          {/*<img*/}
+          {/*  src={`/categories_image/${category.query}.png`}*/}
+          {/*  alt={''}*/}
+          {/*  className="flex rounded-lg bg-gray-100 shadow-md"*/}
+          {/*/>*/}
+        </div>
+        <p className={'flex w-1/6 md:p-10 sm:p-6 text-3xl '}>
+          Rezultat wyszukiwania
+        </p>
+      </div>
+      <div>
+        <MainSection orders={filteredOrders} />
+      </div>
+    </div>
+  )
 }
