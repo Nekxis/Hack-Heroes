@@ -33,14 +33,11 @@ const Register = () => {
     }
     try {
       const user = await createUserWithEmailAndPassword(auth, registerEmail, passwordAgain)
-      console.log(user.user.uid);
-      localStorage.setItem('uid', user.user.uid);
       const addUser = await setDoc(doc(db, 'users', user.user.uid), {
         userName: userName
       })
       router.push('/');
-      cotext.setButton(true)
-      context.setButton(false);
+      
     } catch (error) {
       console.log(error.message);
     }
@@ -50,7 +47,7 @@ const Register = () => {
 
 
   return (
-    < div className="grid grid-cols-1 sm:grid-cols-1 h-screen w-full">
+    <div className="grid grid-cols-1 sm:grid-cols-1 h-screen w-full">
        <button onClick={async () => { await router.push('/') }} className="fixed drop-shadow-xl text-white px-6 py-4 m-4 bg-graphite rounded-lg hover:bg-lite-graphite focus:bg-super-lite-graphite">Powrót</button>
       <div className="bg-white flex flex-col justify-center">
         <form onSubmit={submitHandler} className="xxl:w-96 md:w-90 sm:w-80 xxl:h-1/2 sm:h-160 drop-shadow-2xl mx-auto bg-whiteGray border-gray-400 solid border-2 p-20 sm:p-10 px-20 rounded-lg">
@@ -75,9 +72,7 @@ const Register = () => {
             <p className="cursor-pointer text-center hover:drop-shadow-md">Mam juz konto</p>
           </Link>
           <div className="w-full flex flex-col items-center">
-            <button onClick={() => {
-              context.setButton(true)
-            }} className="w-1/2 justify-center drop-shadow-xl m-auto content-center text-white mt-5  py-3 bg-graphite rounded-lg hover:bg-lite-graphite focus:bg-super-lite-graphite">Zarejestruj</button>
+            <button className="w-1/2 justify-center drop-shadow-xl m-auto content-center text-white mt-5  py-3 bg-graphite rounded-lg hover:bg-lite-graphite focus:bg-super-lite-graphite">Zarejestruj</button>
           </div>
         </form>
       </div>

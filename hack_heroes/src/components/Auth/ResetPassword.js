@@ -8,16 +8,15 @@ const ResetPassword = () => {
     const context = useContext(Context)
     const router = useRouter()
     const [email, setEmail] = useState('')
-    console.log(email);
+    
 
     const changePasswordHandler = () => {
-        console.log(email);
         sendPasswordResetEmail(auth, email)
         router.push('/auth/login')
       }
     return(
     < div className="grid grid-cols-1 sm:grid-cols-1 h-screen w-full">
-             <button onClick={async () => { await router.push('/auth/login') }} className="fixed drop-shadow-xl text-white px-6 py-4 m-4 bg-graphite rounded-lg hover:bg-lite-graphite focus:bg-super-lite-graphite">Powrót</button>
+             <button onClick={ () => { router.push('/auth/login') }} className="fixed drop-shadow-xl text-white px-6 py-4 m-4 bg-graphite rounded-lg hover:bg-lite-graphite focus:bg-super-lite-graphite">Powrót</button>
             <div className="bg-white flex flex-col justify-center">
                 <form className="xxl:w-96 xxl:h-1/3  md:max-w-sm sm:max-w-xs drop-shadow-2xl mx-auto bg-whiteGray border-gray-400 solid border-2 p-20 sm:p-14 px-20 rounded-lg">
                     <h2 className="text-black font-normal text-center text-2xl">Wyślij link do zresetowania hasła na twoje konto email (sprawdź folder spam)</h2>

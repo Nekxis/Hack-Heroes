@@ -22,7 +22,7 @@ export async function getServerSideProps(context) {
 }
 
 export default function UserDashboard({ orders, userOrders }) {
-  console.log(orders.userName, userOrders);
+  
   return (
     <div>
       <MyAccount userName={orders.userName} userOrders={userOrders}/>

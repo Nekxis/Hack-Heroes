@@ -7,7 +7,7 @@ import { Context } from "../../../Context/Context";
 export default function MyAccountButton() {
 
   const context = useContext(Context);
-  console.log(context.user)
+  
   return (
     
     <Link href={`${context.user ? `/${context?.user?.uid}` : `/auth/login` }`}>
