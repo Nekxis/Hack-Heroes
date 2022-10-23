@@ -7,7 +7,11 @@ export default function OrderDetails({ order }) {
 
   const router = useRouter()
 
-    return (
+
+
+  const phone = order.phoneNumber.split(/(.{3})(.{3})(.{3})/);
+
+  return (
 
       <div className={'flex flex-col h-screen w-full'}>
         <button onClick={ () => { router.push('/') }} className="w-28 drop-shadow-xl text-white px-6 py-4 m-4 bg-graphite rounded-lg hover:bg-lite-graphite focus:bg-super-lite-graphite">Powrót</button>
@@ -21,7 +25,7 @@ export default function OrderDetails({ order }) {
             <div className={'flex w-fit justify-end text-right font-bold md:text-6xl text-4xl pl-6 p-2 border-b-2 border-black'}>{order.title}</div>
             <div className={'md:w-2/3 w-3/4 flex flex-col justify-end items-end self-end justify-between'}>
               <div className={'flex justify-between w-5/6 py-2 md:text-3xl'}>
-                <div>tel. {order.phoneNumber}</div>
+                <div>tel. {`${phone[1]} ${phone[2]} ${phone[3]}`}</div>
                 <div>{order.city}</div>
               </div>
               <div className={'md:text-5xl text-4xl pt-2 font-bold'}>{order.price} zł</div>
