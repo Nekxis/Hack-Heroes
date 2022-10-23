@@ -1,4 +1,4 @@
-import { useRef, useContext } from 'react';
+import { useRef, useContext, useState } from 'react';
 import { useRouter } from 'next/router';
 import { db } from '../../../firebase';
 import { collection, addDoc } from 'firebase/firestore';
@@ -11,7 +11,7 @@ const AddOrder = () => {
     const context = useContext(Context);
     const titleRef = useRef();
     const cityRef = useRef();
-    const categoryRef = useRef();
+    const [category, setCategory] = useState('');
     const priceRef = useRef();
     const phoneNumberRef = useRef();
     const descriptionRef = useRef();
@@ -25,7 +25,7 @@ const AddOrder = () => {
         const enteredValues = {
             title: titleRef.current.value,
             city: cityRef.current.value,
-            category: categoryRef.current.value,
+            category: category,
             price: priceRef.current.value,
             phoneNumber: phoneNumberRef.current.value,
             description: descriptionRef.current.value,
@@ -38,7 +38,7 @@ const AddOrder = () => {
                 price: enteredValues.price,
                 description: enteredValues.description,
                 city: enteredValues.city,
-                category: enteredValues.category,
+                category: category,
                 phoneNumber: enteredValues.phoneNumber,
                 user: context.user.uid
             });
@@ -65,7 +65,7 @@ const AddOrder = () => {
                     </div>
                     <div className="flex flex-col">
                         <label className={'font-bold md:text-2xl sm:text-base'}>Kategoria</label>
-                        <select ref={categoryRef} required className=" md:w-96 sm:w-64 text-xl rounded-lg bg-gray-300 mt-2 outline-none p-2 border-solid border-2 border-gray-400 focus:border-gray-300">
+                        <select onClick={(e) => {setCategory(e.target.value)}} required className=" md:w-96 sm:w-64 text-xl rounded-lg bg-gray-300 mt-2 outline-none p-2 border-solid border-2 border-gray-400 focus:border-gray-300">
                             <option value=""></option>
                             <option value="Sprzątanie">Sprzątanie</option>
                             <option value="Elektronika">Elektronika</option>
@@ -79,7 +79,7 @@ const AddOrder = () => {
                     </div>
                     <div className="flex flex-col">
                         <label className={'font-bold md:text-2xl sm:text-base'}>Wynagrodzenie</label>
-                        <input required ref={priceRef} className=" md:w-96 sm:w-64 text-xl rounded-lg bg-gray-300 mt-2 outline-none p-2 border-solid border-2 border-gray-400 focus:border-gray-300" type="number" min="0" max="1000"/>
+                        <input required ref={priceRef} className=" md:w-96 sm:w-64 text-xl rounded-lg bg-gray-300 mt-2 outline-none p-2 border-solid border-2 border-gray-400 focus:border-gray-300" disabled={category === 'Wolontariat'} type="number" min="0" max="1000"/>
                     </div>
                     <div className="flex flex-col">
                         <label className={'font-bold md:text-2xl sm:text-base'}>Numer telefonu</label>
