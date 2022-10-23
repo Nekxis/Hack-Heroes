@@ -3,12 +3,12 @@ import { getFirestore } from 'firebase/firestore';
 import { getAuth } from 'firebase/auth';
 
 const firebaseConfig = {
-    apiKey: "AIzaSyAl7CsIkn9QwPE7nacyDxRrk5axgq3i6kA",
-    authDomain: "hack-heroes-project.firebaseapp.com",
-    projectId: "hack-heroes-project",
-    storageBucket: "hack-heroes-project.appspot.com",
-    messagingSenderId: "642285336043",
-    appId: "1:642285336043:web:271094e739c8724e2015ae"
+    apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
+    authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
+    projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID,
+    storageBucket: process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET,
+    messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID,
+    appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID
 };
 
 
