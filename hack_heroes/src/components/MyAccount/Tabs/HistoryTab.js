@@ -33,7 +33,7 @@ export default function HistoryTab ({orders}) {
                                 />
                             </div>
                             <div className={'lg:col-span-2'}>
-                            <h2 className=" font-bold text-end tracking-tight text-gray-900 md:text-2xl sm:text-base hover:underline hover:cursor-pointer capitalize">{order.title}</h2>
+                            <h2 className=" font-bold text-end tracking-tight text-gray-900 md:text-2xl sm:text-base hover:underline  capitalize">{order.title}</h2>
                             <p className="mt-4 text-end md:text-lg sm:text-sm break-words text-gray-500">{truncate()}</p>
                                 <ul className={'flex justify-end justify-self-end items-end py-2'}>
                                     <li className="text-3xl sm:text-xl  font-bold px-2">{`${order.price} zł`}</li>
