@@ -83,7 +83,7 @@ const AddOrder = () => {
                     </div>
                     <div className="flex flex-col">
                         <label className={'font-bold md:text-2xl sm:text-base'}>Numer telefonu</label>
-                        <input required ref={phoneNumberRef} className=" md:w-96 sm:w-64 text-xl rounded-lg bg-gray-300 mt-2 outline-none p-2 border-solid border-2 border-gray-400 focus:border-gray-300" type="tel" pattern='[0-9]{3} [0-9]{3} [0-9]{3}' />
+                        <input required ref={phoneNumberRef} className=" md:w-96 sm:w-64 text-xl rounded-lg bg-gray-300 mt-2 outline-none p-2 border-solid border-2 border-gray-400 focus:border-gray-300" type="tel" pattern='[0-9]{3}[0-9]{3}[0-9]{3}' />
                     </div>
                     <div className="flex flex-col lg:col-span-2">
                         <label className={'font-bold md:text-2xl sm:text-base'}>Opis</label>
