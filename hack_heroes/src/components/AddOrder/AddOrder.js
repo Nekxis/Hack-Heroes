@@ -78,8 +78,8 @@ const AddOrder = () => {
 
                     </div>
                     <div className="flex flex-col">
-                        <label className={'font-bold md:text-2xl sm:text-base'}>Cena</label>
-                        <input required ref={priceRef} className=" md:w-96 sm:w-64 text-xl rounded-lg bg-gray-300 mt-2 outline-none p-2 border-solid border-2 border-gray-400 focus:border-gray-300" type="number" min="1" max="1000"/>
+                        <label className={'font-bold md:text-2xl sm:text-base'}>Wynagrodzenie</label>
+                        <input required ref={priceRef} className=" md:w-96 sm:w-64 text-xl rounded-lg bg-gray-300 mt-2 outline-none p-2 border-solid border-2 border-gray-400 focus:border-gray-300" type="number" min="0" max="1000"/>
                     </div>
                     <div className="flex flex-col">
                         <label className={'font-bold md:text-2xl sm:text-base'}>Numer telefonu</label>
