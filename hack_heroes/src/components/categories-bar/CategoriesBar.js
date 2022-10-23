@@ -45,11 +45,11 @@ export default function CategoriesBar() {
     };
 
     return (
-        <section className='mt-10 mb-6 rounded h-auto p-2 w-8/10 mx-auto bg-navbar-background'>
+        <section className=' shadow-lg mb-6 sm:mt-0 sm:w-full mt-4 rounded h-auto p-2 w-9/10 mx-auto bg-white-background'>
             <div className="hidden w-full md:flex flex-wrap gap-12 justify-center items-center">
                 {categories.map((category, index) => {
                     return (
-                        <div onClick={() => { pushSearchPage(category.name) }} key={index} className="flex p-2 w-36 rounded justify-center items-center flex-col cursor-pointer ease-in-out duration-150 hover:bg-graphite hover:text-white">
+                        <div onClick={() => { pushSearchPage(category.name) }} key={index} className="flex p-2 w-26 rounded justify-center items-center flex-col cursor-pointer ease-in-out duration-150 hover:bg-graphite hover:text-white">
                             <img className="p-1 bg-white" src={category.icon} style={{ width: '50px', height: '50px', borderRadius: '50%' }} />
                             <p className="mt-1 font-bold ">{category.name}</p>
                         </div>
