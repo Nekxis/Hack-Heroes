@@ -32,7 +32,7 @@ export default function SectionElement ({title, description, price, id, category
            {truncate()}
           </p>
           <ul className={'flex justify-end justify-self-end items-end py-2'}>
-            <li className="text-3xl font-bold px-2">{`${price} zł`}</li>
+            <li className="text-3xl font-bold px-2">{category === 'Wolontariat' ? '' : `${price} zł` }</li>
             <li className="text-xl text-our-grey px-2">{city}</li>
           </ul>
 
