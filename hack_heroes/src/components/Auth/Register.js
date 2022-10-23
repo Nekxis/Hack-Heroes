@@ -37,7 +37,7 @@ const Register = () => {
         userName: userName
       })
       router.push('/');
-      
+
     } catch (error) {
       console.log(error.message);
     }
@@ -47,9 +47,9 @@ const Register = () => {
 
 
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-1 h-screen w-full">
-       <button onClick={async () => { await router.push('/') }} className="fixed drop-shadow-xl text-white px-6 py-4 m-4 bg-graphite rounded-lg hover:bg-lite-graphite focus:bg-super-lite-graphite">Powrót</button>
-      <div className="bg-white flex flex-col justify-center">
+    <div className="flex flex-col h-screen w-full">
+      <button onClick={ () => { router.push('/') }} className="w-28 h-14 drop-shadow-xl text-white px-6 py-4 m-4 bg-graphite rounded-lg hover:bg-lite-graphite focus:bg-super-lite-graphite">Powrót</button>
+      <div className="h-full bg-white flex flex-col justify-center">
         <form onSubmit={submitHandler} className="xxl:w-96 md:w-90 sm:w-80 xxl:h-1/2 sm:h-160 drop-shadow-2xl mx-auto bg-whiteGray border-gray-400 solid border-2 p-20 sm:p-10 px-20 rounded-lg">
           <h2 className="text-black font-normal text-center text-4xl">Zarejestruj</h2>
           <div className="flex flex-col text-black pb-4 pt-6">
